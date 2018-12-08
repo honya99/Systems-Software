@@ -1,0 +1,34 @@
+ASSEMBLER REPORT
+----------------
+     Loc   Object Code       Source Code
+     ----   -----------       -----------
+001- 00100                   ADDRES	START	100
+002-                         .tests pc forward addressing
+003-                         .tests base addressing
+004-                         .tests pc backward addressing
+005- 00100                   NOW	+LDB	#BEGIN	.LOAD BASE REGISTER
+006- 00104                   XXX	BASE	BEGIN	.TELL ASSEMBLER
+007- 00104                   YYY	LDA	BE	.A <- (M..M+2)
+008- 00107                   EN	RESW	4
+009- 00113                   BE	WORD	2
+010- 00116                   BEGIN	RESW	1
+011- 00119                   JUNK	RESW	2200
+012- 01AE1                   THERE	RESW	1
+013- 01AE4                   ZZZ	LDA	JUNK
+014- 01AE7                   MMM	STA	THERE
+015- 01AEA                   	END	NOW
+
+
+Table  Location   Label  Address   Use   Csect
+-----  --------   -----  -------   ---   -----
+2     		YYY	00104
+5     		MMM	01AE7
+24     		ADDRES	100
+26     		ZZZ	01AE4
+29     		EN	00107
+39     		BE	00113
+44     		THERE	01AE1
+53     		JUNK	00119
+64     		NOW	00100
+75     		XXX	00104
+79     		BEGIN	00116

@@ -1,0 +1,1708 @@
+#!/bin/sh
+# This is a shell archive (produced by GNU sharutils 4.7).
+# To extract the files from this archive, save it to some FILE, remove
+# everything before the `#!/bin/sh' line above, then type `sh FILE'.
+#
+lock_dir=_sh12839
+# Made on 2018-12-07 20:31 EST by <n00952091@osprey.unfcsd.unf.edu>.
+# Source directory was `/home/91/n00952091/COP3404/COP3404_P4/ProjectFour'.
+#
+# Existing files will *not* be overwritten, unless `-c' is specified.
+#
+# This shar contains:
+# length mode       name
+# ------ ---------- ------------------------------------------
+#    356 -rw-r--r-- AssemblerMain.java
+#    294 -rw-r--r-- f1.txt
+#    583 -rw-r--r-- f2.txt
+#    637 -rw-r--r-- f3.txt
+#   3718 -rw-r--r-- GenericHashingTable.java
+#    408 -rw-r--r-- HashableObject.java
+#    366 -rw-r--r-- labelObject.java
+#     21 -rw-r--r-- makefile
+#   9240 -rw-r--r-- NextLineObject.java
+#   8384 -rw-r--r-- Pass1.java
+#  15095 -rw-r--r-- Pass2.java
+#   1341 -rw-r--r-- ReadLabelTable.java
+#   1205 -rw-r--r-- README.md
+#    908 -rw-r--r-- SICEQU.java
+#     80 -rw-r--r-- SICEQUTable.java
+#    222 -rw-r--r-- SICInstructionHashTable.java
+#    845 -rw-r--r-- SICInstruction.java
+#    162 -rw-r--r-- SICLabelObjectTable.java
+#   1616 -rw-r--r-- SICOperationsTable.java
+#   2072 -rw-r--r-- SicOps.txt
+#
+MD5SUM=${MD5SUM-md5sum}
+f=`${MD5SUM} --version | egrep '^md5sum .*(core|text)utils'`
+test -n "${f}" && md5check=true || md5check=false
+${md5check} || \
+  echo 'Note: not verifying md5sums.  Consider installing GNU coreutils.'
+save_IFS="${IFS}"
+IFS="${IFS}:"
+gettext_dir=FAILED
+locale_dir=FAILED
+first_param="$1"
+for dir in $PATH
+do
+  if test "$gettext_dir" = FAILED && test -f $dir/gettext \
+     && ($dir/gettext --version >/dev/null 2>&1)
+  then
+    case `$dir/gettext --version 2>&1 | sed 1q` in
+      *GNU*) gettext_dir=$dir ;;
+    esac
+  fi
+  if test "$locale_dir" = FAILED && test -f $dir/shar \
+     && ($dir/shar --print-text-domain-dir >/dev/null 2>&1)
+  then
+    locale_dir=`$dir/shar --print-text-domain-dir`
+  fi
+done
+IFS="$save_IFS"
+if test "$locale_dir" = FAILED || test "$gettext_dir" = FAILED
+then
+  echo=echo
+else
+  TEXTDOMAINDIR=$locale_dir
+  export TEXTDOMAINDIR
+  TEXTDOMAIN=sharutils
+  export TEXTDOMAIN
+  echo="$gettext_dir/gettext -s"
+fi
+if (echo "testing\c"; echo 1,2,3) | grep c >/dev/null
+then if (echo -n test; echo 1,2,3) | grep n >/dev/null
+     then shar_n= shar_c='
+'
+     else shar_n=-n shar_c= ; fi
+else shar_n= shar_c='\c' ; fi
+f=shar-touch.$$
+st1=200112312359.59
+st2=123123592001.59
+st2tr=123123592001.5 # old SysV 14-char limit
+st3=1231235901
+
+if touch -am -t ${st1} ${f} >/dev/null 2>&1 && \
+   test ! -f ${st1} && test -f ${f}; then
+  shar_touch='touch -am -t $1$2$3$4$5$6.$7 "$8"'
+
+elif touch -am ${st2} ${f} >/dev/null 2>&1 && \
+   test ! -f ${st2} && test ! -f ${st2tr} && test -f ${f}; then
+  shar_touch='touch -am $3$4$5$6$1$2.$7 "$8"'
+
+elif touch -am ${st3} ${f} >/dev/null 2>&1 && \
+   test ! -f ${st3} && test -f ${f}; then
+  shar_touch='touch -am $3$4$5$6$2 "$8"'
+
+else
+  shar_touch=:
+  echo
+  ${echo} 'WARNING: not restoring timestamps.  Consider getting and'
+  ${echo} 'installing GNU `touch'\'', distributed in GNU coreutils...'
+  echo
+fi
+rm -f ${st1} ${st2} ${st2tr} ${st3} ${f}
+#
+if test ! -d ${lock_dir}
+then : ; else ${echo} 'lock directory '${lock_dir}' exists'
+  exit 1
+fi
+if mkdir ${lock_dir}
+then ${echo} 'x - created lock directory `'${lock_dir}\''.'
+else ${echo} 'x - failed to create lock directory `'${lock_dir}\''.'
+  exit 1
+fi
+# ============= AssemblerMain.java ==============
+if test -f 'AssemblerMain.java' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING AssemblerMain.java (file already exists)'
+else
+${echo} 'x - extracting AssemblerMain.java (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 AssemblerMain.java
+M("`@("\O2&]N>6$@16QF87EO=6UY#0H-"B`@('!U8FQI8R!C;&%S<R!!<W-E
+M;6)L97)-86EN>PT*("`@("`@<'5B;&EC('-T871I8R!V;VED(&UA:6XH4W1R
+M:6YG6UT@87)G<RE[#0H@("`@("`@("!I9BAA<F=S+FQE;F=T:"`]/2`P*7L-
+M"B`@("`@("`@("`@(%-Y<W1E;2YO=70N<')I;G1L;B@B3F\@9FEL92!N86UE
+M('=A<R!P87-S960N(BD[#0H@("`@("`@("`@("!3>7-T96TN97AI="@M,2D[
+M#0H@("`@("`@("!]#0H@("`@("`@("!E;'-E>R`-"B`@("`@("`@("`@(%!A
+M<W,R('1W;U!A<W,@/2!N97<@4&%S<S(H87)G<ULP72P@;F5W(%-)0T]P97)A
+I=&EO;G-486)L92@I*3L-"B`@("`@("`@('T-"B`@("`@('T-"B`@('UP
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 20 30 00 'AssemblerMain.java'; eval "$shar_touch") &&
+  chmod 0644 'AssemblerMain.java'
+if test $? -ne 0
+then ${echo} 'restore of AssemblerMain.java failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'AssemblerMain.java: MD5 check failed'
+       ) << \SHAR_EOF
+46b19223102fe1d592a07ffc95b6a4b3  AssemblerMain.java
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'AssemblerMain.java'` -ne 356 && \
+  ${echo} 'restoration warning:  size of AssemblerMain.java is not 356'
+  fi
+fi
+# ============= f1.txt ==============
+if test -f 'f1.txt' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING f1.txt (file already exists)'
+else
+${echo} 'x - extracting f1.txt (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 f1.txt
+M041$4D53("`@(%-405)4("`@(#$P,`T*3D]7("`@("`@*TQ$0B`@("`@(T)%
+M1TE.#0I86%@@("`@("`@0D%312`@("`@0D5'24X@#0I965D@("`@("`@3$1!
+M("`@("`@0D4-"B`@("`@("`@("!215-7("`@("`T#0I"12`@("`@("`@5T]2
+M1"`@("`@,B`-"D)%1TE.("`@("!215-7("`@("`Q#0I*54Y+("`@("`@4D53
+M5R`@("`@,C(P,"`-"E1(15)%("`@("!215-7("`@("`Q("`@#0I:6EH@("`@
+M("`@3$1!("`@("`@2E5.2R`-"DU-32`@("`@("!35$$@("`@("!42$5212`-
+8"B`@("`@("`@("!%3D0@("`@("!.3U<@
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 20 30 01 'f1.txt'; eval "$shar_touch") &&
+  chmod 0644 'f1.txt'
+if test $? -ne 0
+then ${echo} 'restore of f1.txt failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'f1.txt: MD5 check failed'
+       ) << \SHAR_EOF
+104ccb6e2e40fe2a415e1bb7aad78ef1  f1.txt
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'f1.txt'` -ne 294 && \
+  ${echo} 'restoration warning:  size of f1.txt is not 294'
+  fi
+fi
+# ============= f2.txt ==============
+if test -f 'f2.txt' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING f2.txt (file already exists)'
+else
+${echo} 'x - extracting f2.txt (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 f2.txt
+M041$4D53("`@(%-405)4("`@(#$P,"`@("`@("`@("`@("`@("`@("`@("`@
+M("`@("`@("`*+B!T97-T<R!P8R!F;W)W87)D(&%D9')E<W-I;F<*+B!T97-T
+M<R!B87-E(&%D9')E<W-I;F<*+B!T97-T<R!P8R!B86-K=V%R9"!A9&1R97-S
+M:6YG"DY/5R`@("`@("M,1$(@("`@("-"14=)3B`@("`@("`@("`@("`@;&]A
+M9"!B87-E(')E9VES=&5R(`I86%@@("`@("`@0D%312`@("`@0D5'24X@("`@
+M("`@("`@("`@('1E;&P@87-S96UB;&5R("`*65E9("`@("`@($Q$02`@("`@
+M($)%("`@("`@("`@("`@("`@("!!(#PM("AM+BYM*S(I"B`@("`@("`@("!2
+M4U5"("`@("`@("`@("`@"D5.("`@("`@("!215-7("`@("`T("`@("`@("`@
+M("`@("`@("`@"D)%("`@("`@("!73U)$("`@("`R"D)%1TE.("`@("!215-7
+M("`@("`Q"DI53DL@("`@("!215-7("`@("`R,C`P"E1(15)%("`@("!215-7
+M("`@("`Q"EI:6B`@("`@("!,1$$@("`@("!*54Y+"D1$1"`@("`@("!"651%
+M("`@("!#)UHQ-38G"DM%62`@("`@("!"651%("`@("!8)S4W.#DG"DU-32`@
+K("`@("!35$$@("`@("!42$5210H@("`@("`@("`@14Y$("`@("`@3D]7("`@
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 20 30 01 'f2.txt'; eval "$shar_touch") &&
+  chmod 0644 'f2.txt'
+if test $? -ne 0
+then ${echo} 'restore of f2.txt failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'f2.txt: MD5 check failed'
+       ) << \SHAR_EOF
+c5b77da7014896704e00360ddaa091dd  f2.txt
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'f2.txt'` -ne 583 && \
+  ${echo} 'restoration warning:  size of f2.txt is not 583'
+  fi
+fi
+# ============= f3.txt ==============
+if test -f 'f3.txt' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING f3.txt (file already exists)'
+else
+${echo} 'x - extracting f3.txt (text)'
+  sed 's/^X//' << 'SHAR_EOF' > 'f3.txt' &&
+ADDRES    START    100                               
+X. tests pc forward addressing
+X. tests base addressing
+X. tests pc backward addressing
+NOW      +LDB     #BEGIN              load base register 
+XXXX       BASE     BEGIN              tell assembler  
+X          LDA      #1                  A <- (m..m+2)
+BBB       LDX      #5
+EN        RESW     4
+BOOM      MULR     A,T
+BE        WORD     2
+RIP       WORD     3
+LOL       WORD     6
+X          WORD     -7
+X          WORD     8
+X          WORD     9
+BEGIN     RESW     1
+JUNK      RESW     1000
+X          LDA      JUNK
+THERE     WORD     5
+MMM       STA      THERE
+X          END      NOW 
+SHAR_EOF
+  (set 20 18 12 07 20 30 00 'f3.txt'; eval "$shar_touch") &&
+  chmod 0644 'f3.txt'
+if test $? -ne 0
+then ${echo} 'restore of f3.txt failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'f3.txt: MD5 check failed'
+       ) << \SHAR_EOF
+3eddc796290adf9236b76cd0e69ab883  f3.txt
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'f3.txt'` -ne 637 && \
+  ${echo} 'restoration warning:  size of f3.txt is not 637'
+  fi
+fi
+# ============= GenericHashingTable.java ==============
+if test -f 'GenericHashingTable.java' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING GenericHashingTable.java (file already exists)'
+else
+${echo} 'x - extracting GenericHashingTable.java (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 GenericHashingTable.java
+M+R](;VYY82!%;&9A>6]U;7D-"@T*<'5B;&EC(&%B<W1R86-T(&-L87-S($=E
+M;F5R:6-(87-H:6YG5&%B;&5[#0H@("`@<')I=F%T92!I;G0@05)205E325I%
+M.PD)+R\@0V]N<W1A;G0@9F]R(&%R<F%Y(&QE;F=T:#L@<')I;64@;G5M8F5R
+M#0H@("`@9FEN86P@<W1A=&EC(&EN="!$3U5"3$5(05-(24Y'0T].4U1!3E0@
+M/2`X,SL@+R\@0V]N<W1A;G0@=7-E9"!F;W(@9&]U8FQE(&AA<VAI;F<[('!R
+M:6UE(&YU;6)E<@T*#0H@("`@<')I=F%T92!I;G0@;G5M8F5R3V9)=&5M<R`]
+M(#`[#0H-"B`@("!P=6)L:6,@:6YT(&=E=$QA<W1E<W1"87-E*"D@>PT*("`@
+M("`@("!R971U<FX@3&%S=&5S=$)A<V4[#0H@("`@?0T*#0H@("`@<'5B;&EC
+M('9O:60@<V5T3&%S=&5S=$)A<V4H:6YT(&QA<W1E<W1"87-E*2![#0H@("`@
+M("`@($QA<W1E<W1"87-E(#T@;&%S=&5S=$)A<V4[#0H@("`@?0T*#0H@("`@
+M<')I=F%T92!I;G0@3&%S=&5S=$)A<V4@/2`M,3L-"@T*("`@('!U8FQI8R!(
+M87-H86)L94]B:F5C=%M=(&UY07)R87D[#0H-"B`@("!P=6)L:6,@1V5N97)I
+M8TAA<VAI;F=486)L92@I>PT*("`@("`@("!T:&ES*#DW*3L@+R\@0V]N<W1A
+M;G0@=7-E9"!F;W(@87)R87D@;&5N9W1H.R!I<R!A('!R:6UE(&YU;6)E<@T*
+M("`@('T-"@T*("`@('!U8FQI8R!'96YE<FEC2&%S:&EN9U1A8FQE*&EN="!A
+M<G)A>5-I>F4I>PT*("`@("`@("!T:&ES+D%24D%94TE:12`](&=E=%!R:6UE
+M3G5M8F5R*&%R<F%Y4VEZ92D[#0H@("`@("`@(&UY07)R87D@/2!N97<@2&%S
+M:&%B;&5/8FIE8W1;05)205E325I%73L-"B`@("!]#0H-"B`@("!P=6)L:6,@
+M<W1A=&EC(&EN="!G9710<FEM94YU;6)E<BAI;G0@;6EN4VEZ92E[#0H@("`@
+M("`@(&9O<BAI;G0@:2`](&UI;E-I>F4[('1R=64[(&DK*RE[#0H@("`@("`@
+M("`@("!I9BAI<U!R:6UE*&DI*0T*("`@("`@("`@("`@("`@(')E='5R;B!I
+M.PT*("`@("`@("!]#0H@("`@?0T*#0H@("`@+R\@1&5T97)M:6YE<R!I9B!N
+M=6UB97(@:7,@<')I;64-"B`@("!P<FEV871E('-T871I8R!B;V]L96%N(&ES
+M4')I;64H:6YT(&XI>PT*("`@("`@("!F;W(H:6YT(&H@/2`R.R`H:BIJ(#P]
+M(&XI.R!J*RLI#0H@("`@("`@("`@("!I9B@@;B`E(&H@/3T@,"D-"B`@("`@
+M("`@("`@("`@("!R971U<FX@9F%L<V4[#0H@("`@("`@(')E='5R;B!T<G5E
+M.PT*("`@('T-"@T*("`@('!U8FQI8R!(87-H86)L94]B:F5C=%M=(&=E=$%R
+M<F%Y*"E[#0H@("`@("`@(')E='5R;B!M>4%R<F%Y.PT*("`@('T-"@T*("`@
+M('!U8FQI8R!I;G0@:6YS97)T*$AA<VAA8FQE3V)J96-T(&UY3V)J96-T*7L-
+M"B`@("`@("`@:6YT(&AA<VA686QU92`](&=E=$AA<VA686QU92AM>4]B:F5C
+M="YG971(87-H86)L95-T<FEN9R@I*3L-"@T*("`@("`@("!W:&EL92AM>4%R
+M<F%Y6VAA<VA686QU95T@(3T@;G5L;"E[#0H@("`@("`@("`@("!H87-H5F%L
+M=64@*ST@9V5T4W1E<%9A;'5E*&UY3V)J96-T+F=E=$AA<VAA8FQE4W1R:6YG
+M*"DI.PD)"2\O(&%D9"!T:&4@<W1E<"!F;W(@8V]L;&ES:6]N#0H@("`@("`@
+M("`@("!H87-H5F%L=64@)3T@05)205E325I%.PD)"0D)"0DO+R!F;W(@=W)A
+M<&%R;W5N9`T*("`@("`@("!]#0H-"B`@("`@("`@;7E!<G)A>5MH87-H5F%L
+M=65=(#T@;7E/8FIE8W0["0DO+R!R969E<F5N8V5S('1H92!E;G1I<F4@<W1R
+M:6YG(&EN=&\@<W1O<F%G90T*#0H@("`@("`@("LK;G5M8F5R3V9)=&5M<SL-
+M"@T*("`@("`@("!R971U<FX@:&%S:%9A;'5E.PT*("`@('T-"@T*("`@('!U
+M8FQI8R!(87-H86)L94]B:F5C="!G971/8FIE8W1!="AI;G0@:6YD97@I>PT*
+M("`@("`@("!R971U<FX@;7E!<G)A>5MI;F1E>%T[#0H@("`@?0T*#0H@("`@
+M<'5B;&EC(&EN="!F:6YD*$AA<VAA8FQE3V)J96-T(&UY3V)J96-T*7L-"B`@
+M("`@("`@:6YT(&AA<VA686QU92`](&=E=$AA<VA686QU92AM>4]B:F5C="YG
+M971(87-H86)L95-T<FEN9R@I*3L-"@T*("`@("`@("!W:&EL92AM>4%R<F%Y
+M6VAA<VA686QU95T@(3T@;G5L;"E[#0H@("`@("`@("`@("!I9BAM>4%R<F%Y
+M6VAA<VA686QU95TN9V5T2&%S:&%B;&53=')I;F<H*2YC;VUP87)E5&\H;7E/
+M8FIE8W0N9V5T2&%S:&%B;&53=')I;F<H*2D@/3T@,"D-"B`@("`@("`@("`@
+M("`@("!R971U<FX@:&%S:%9A;'5E.PT*#0H@("`@("`@("`@("!H87-H5F%L
+M=64@*ST@9V5T4W1E<%9A;'5E*&UY3V)J96-T+F=E=$AA<VAA8FQE4W1R:6YG
+M*"DI.PT*("`@("`@("`@("`@:&%S:%9A;'5E("4]($%24D%94TE:13L-"B`@
+M("`@("`@?0T*#0H@("`@("`@(')E='5R;B`M,3L-"B`@("!]#0H-"B`@("!P
+M=6)L:6,@:6YT(&9I;F0H4W1R:6YG('-T<FEN9RE[#0H@("`@("`@(&EN="!H
+M87-H5F%L=64@/2!G971(87-H5F%L=64H<W1R:6YG+G1O57!P97)#87-E*"DI
+M.PT*#0H@("`@("`@('=H:6QE*&UY07)R87E;:&%S:%9A;'5E72`A/2!N=6QL
+M*7L-"B`@("`@("`@("`@(&EF*&UY07)R87E;:&%S:%9A;'5E72YG971(87-H
+M86)L95-T<FEN9R@I+F-O;7!A<F54;RAS=')I;F<N=&]5<'!E<D-A<V4H*2D@
+M/3T@,"D-"B`@("`@("`@("`@("`@("!R971U<FX@:&%S:%9A;'5E.PT*#0H@
+M("`@("`@("`@("!H87-H5F%L=64@*ST@9V5T4W1E<%9A;'5E*'-T<FEN9RYT
+M;U5P<&5R0V%S92@I*3L-"B`@("`@("`@("`@(&AA<VA686QU92`E/2!!4E)!
+M65-)6D4[#0H@("`@("`@('T-"@T*("`@("`@("!R971U<FX@+3$[#0H@("`@
+M?0T*#0H@("`@<'5B;&EC('9O:60@9&ES<&QA>51A8FQE*"E[#0H@("`@("`@
+M(%-Y<W1E;2YO=70N<')I;G1L;B@B5&%B;&4Z("(I.PT*("`@("`@("!F;W(H
+M:6YT(&H@/2`P.R!J(#P@05)205E325I%.R!J*RLI>PT*("`@("`@("`@("`@
+M:68H;7E!<G)A>5MJ72`A/2!N=6QL*0T*("`@("`@("`@("`@("`@(%-Y<W1E
+M;2YO=70N<')I;G1L;BAM>4%R<F%Y6VI=("L@(B`B*3L-"B`@("`@("`@("`@
+M(&5L<V4-"B`@("`@("`@("`@("`@("!3>7-T96TN;W5T+G!R:6YT;&XH(BHJ
+M("(I.PT*("`@("`@("!]#0H@("`@("`@(%-Y<W1E;2YO=70N<')I;G1L;B@I
+M.PT*("`@('T-"@T*("`@('!R:79A=&4@:6YT(&=E=$AA<VA686QU92A3=')I
+M;F<@:&%S:&%B;&53=')I;F<I>PT*("`@("`@("!I;G0@:&%S:%9A;'5E(#T@
+M,#L-"@T*("`@("`@("!F;W(H:6YT(&H@/2`P.R!J(#P@:&%S:&%B;&53=')I
+M;F<N;&5N9W1H*"D[(&HK*RE[#0H@("`@("`@("`@("!I;G0@;&5T=&5R(#T@
+M:&%S:&%B;&53=')I;F<N=&]5<'!E<D-A<V4H*2YC:&%R070H:BD["0D)"2\O
+M(&=E="!C:&%R($%30TE)(&-O9&4-"B`@("`@("`@("`@(&AA<VA686QU92`]
+M("AH87-H5F%L=64@*B`R-B`K(&QE='1E<BD@)2!!4E)!65-)6D4[("\O(&UO
+M9'5L87(@=&\@05)205E325I%#0H@("`@("`@('T-"@T*("`@("`@("!R971U
+M<FX@:&%S:%9A;'5E.PT*("`@('T-"@T*("`@('!R:79A=&4@:6YT(&=E=%-T
+M97!686QU92A3=')I;F<@:&%S:&%B;&53=')I;F<I>PT*("`@("`@("!R971U
+M<FX@1$]50DQ%2$%32$E.1T-/3E-404Y4("T@*&=E=$AA<VA686QU92AH87-H
+M86)L95-T<FEN9RD@)2!$3U5"3$5(05-(24Y'0T].4U1!3E0I.R`O+R!$;W5B
+M;&4@:&%S:`T*("`@('T-"@T*("`@('!U8FQI8R!I;G0@9V5T3G5M8F5R3V9)
+M=&5M<R@I>PT*("`@("`@("!R971U<FX@;G5M8F5R3V9)=&5M<SL-"B`@("!]
+M#0H-"B`@("!P=6)L:6,@:6YT(&=E=$%R<F%Y4VEZ92@I>PT*("`@("`@("!R
+<971U<FX@05)205E325I%.PT*("`@('T-"GT-"FEZ
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 20 30 00 'GenericHashingTable.java'; eval "$shar_touch") &&
+  chmod 0644 'GenericHashingTable.java'
+if test $? -ne 0
+then ${echo} 'restore of GenericHashingTable.java failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'GenericHashingTable.java: MD5 check failed'
+       ) << \SHAR_EOF
+ee5306112b43ca371233d12e76fabf36  GenericHashingTable.java
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'GenericHashingTable.java'` -ne 3718 && \
+  ${echo} 'restoration warning:  size of GenericHashingTable.java is not 3718'
+  fi
+fi
+# ============= HashableObject.java ==============
+if test -f 'HashableObject.java' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING HashableObject.java (file already exists)'
+else
+${echo} 'x - extracting HashableObject.java (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 HashableObject.java
+M("`O+TAO;GEA($5L9F%Y;W5M>0T*#0H@("!P=6)L:6,@86)S=')A8W0@8VQA
+M<W,@2&%S:&%B;&5/8FIE8W1[#0H@("`@("!P<FEV871E(%-T<FEN9R!H87-H
+M86)L95-T<FEN9R`]("(B.PT*("`@"0T*("`@("`@<'5B;&EC(%-T<FEN9R!G
+M971(87-H86)L95-T<FEN9R@I>PT*("`@("`@("`@<F5T=7)N(&AA<VAA8FQE
+M4W1R:6YG.PT*("`@("`@?0T*("`@"0T*("`@("`@<')O=&5C=&5D('9O:60@
+M<V5T2&%S:&%B;&53=')I;F<H4W1R:6YG(&AA<VAA8FQE4W1R:6YG*7L-"B`@
+M("`@("`@('1H:7,N:&%S:&%B;&53=')I;F<@/2!H87-H86)L95-T<FEN9RYT
+M;U5P<&5R0V%S92@I.PT*("`@("`@?0T*"0D-"@D)<'5B;&EC(%-T<FEN9R!T
+M;U-T<FEN9R@I>PT*"0D)<F5T=7)N(&AA<VAA8FQE4W1R:6YG.PT*"0E]#0H@
+#("!]
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 20 30 01 'HashableObject.java'; eval "$shar_touch") &&
+  chmod 0644 'HashableObject.java'
+if test $? -ne 0
+then ${echo} 'restore of HashableObject.java failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'HashableObject.java: MD5 check failed'
+       ) << \SHAR_EOF
+0b75939d1254ce187443e0da2e7b066d  HashableObject.java
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'HashableObject.java'` -ne 408 && \
+  ${echo} 'restoration warning:  size of HashableObject.java is not 408'
+  fi
+fi
+# ============= labelObject.java ==============
+if test -f 'labelObject.java' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING labelObject.java (file already exists)'
+else
+${echo} 'x - extracting labelObject.java (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 labelObject.java
+M("`O+TAO;GEA($5L9F%Y;W5M>0T*#0IP=6)L:6,@8VQA<W,@;&%B96Q/8FIE
+M8W0@97AT96YD<R!(87-H86)L94]B:F5C='L-"@EP<FEV871E(%-T<FEN9R!L
+M86)E;#L-"@EP<FEV871E(&EN="!L;V-A=&EO;CL-"@D-"@EP=6)L:6,@;&%B
+M96Q/8FIE8W0H4W1R:6YG(&QA8F5L+"!I;G0@;&]C871I;VXI>PT*"0ET:&ES
+M+FQA8F5L(#T@;&%B96P[#0H)"71H:7,N;&]C871I;VX@/2!L;V-A=&EO;CL-
+M"@D)<V5T2&%S:&%B;&53=')I;F<H;&%B96PI.PT*"7T-"@D-"@EP=6)L:6,@
+M4W1R:6YG(&=E=$QA8F5L*"E[#0H)"7)E='5R;B!L86)E;#L-"@E]#0H-"@EP
+M=6)L:6,@:6YT(&=E=$QO8V%T:6]N*"E[#0H)"7)E='5R;B!L;V-A=&EO;CL-
+&"@E]#0I]
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 20 30 01 'labelObject.java'; eval "$shar_touch") &&
+  chmod 0644 'labelObject.java'
+if test $? -ne 0
+then ${echo} 'restore of labelObject.java failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'labelObject.java: MD5 check failed'
+       ) << \SHAR_EOF
+e5cdf5903af28ac4fb4ce54dc59a46ff  labelObject.java
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'labelObject.java'` -ne 366 && \
+  ${echo} 'restoration warning:  size of labelObject.java is not 366'
+  fi
+fi
+# ============= makefile ==============
+if test -f 'makefile' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING makefile (file already exists)'
+else
+${echo} 'x - extracting makefile (text)'
+  sed 's/^X//' << 'SHAR_EOF' > 'makefile' &&
+all:
+X	@javac *.java
+X
+SHAR_EOF
+  (set 20 18 11 03 18 28 05 'makefile'; eval "$shar_touch") &&
+  chmod 0644 'makefile'
+if test $? -ne 0
+then ${echo} 'restore of makefile failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'makefile: MD5 check failed'
+       ) << \SHAR_EOF
+1a2d0ff2c1adffe2717fd1c5c03ed542  makefile
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'makefile'` -ne 21 && \
+  ${echo} 'restoration warning:  size of makefile is not 21'
+  fi
+fi
+# ============= NextLineObject.java ==============
+if test -f 'NextLineObject.java' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING NextLineObject.java (file already exists)'
+else
+${echo} 'x - extracting NextLineObject.java (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 NextLineObject.java
+M("`@("`O+TAO;GEA($5L9F%Y;W5M>0T*("`@#0H@("!P=6)L:6,@8VQA<W,@
+M3F5X=$QI;F5/8FIE8W0@>PT*("`@("`@<')I=F%T92!3=')I;F<@;&%B96P@
+M/2`B(CL-"B`@("`@('!R:79A=&4@4W1R:6YG(&UN96UO;FEC(#T@(B([#0H@
+M("`@("!P<FEV871E(%-T<FEN9R!O<&5R86YD(#T@(B([#0H@("`@("!P<FEV
+M871E(%-T<FEN9R!C;VUM96YT(#T@(B([#0H-"B`@("`@('!R:79A=&4@4W1R
+M:6YG(&]B:F5C=$-O9&4@/2`B1D9&(CL-"B`@("`@('!R:79A=&4@4W1R:6YG
+M(&QO8V%T:6]N(#T@(C`P,#`P,"([#0H-"B`@("`@('!R:79A=&4@4W1R:6YG
+M(&]P97)A;F1!9&1R97-S(#T@(D9&1B([#0H-"B`@("`@('!R:79A=&4@8F]O
+M;&5A;B!I<T-O;6UE;G0@/2!F86QS93L-"B`@("`@('!U8FQI8R!B;V]L96%N
+M(&1U<&QI8V%T95-Y;6)O;"`](&9A;'-E.PT*("`@("`@<'5B;&EC(&)O;VQE
+M86X@:6YV86QI9$]P97)A=&EO;D-O9&4@/2!F86QS93L-"B`@("`@('!U8FQI
+M8R!B;V]L96%N(&EN=F%L:61#;VYS=&%N=%1Y<&4@/2!F86QS93L-"B`@("`@
+M('!U8FQI8R!B;V]L96%N('5N9&5F:6YE9%-Y;6)O;"`](&9A;'-E.PT*#0H-
+M"B`@("`@('!U8FQI8R!.97AT3&EN94]B:F5C="A3=')I;F<@;F5X=$QI;F4I
+M('L-"B`@("`@("`@('1H:7,N:7-#;VUM96YT(#T@9F%L<V4[#0H@("`@("`@
+M("!T:&ES+F1U<&QI8V%T95-Y;6)O;"`](&9A;'-E.PT*("`@("`@("`@=&AI
+M<RYI;G9A;&ED3W!E<F%T:6]N0V]D92`](&9A;'-E.PT*("`@("`@("`@=&AI
+M<RYI;G9A;&ED0V]N<W1A;G14>7!E(#T@9F%L<V4[#0H@("`@("`@("!T:&ES
+M+G5N9&5F:6YE9%-Y;6)O;"`](&9A;'-E.PT*("`@("`@("`@:68@*&YE>'1,
+M:6YE+F-H87)!="@P*2`]/2`G+B<I('L-"B`@("`@("`@("`@(&ES0V]M;65N
+M="`]('1R=64[#0H@("`@("`@("`@("!C;VUM96YT(#T@;F5X=$QI;F4[#0H@
+M("`@("`@("`@("!R971U<FX[#0H@("`@("`@("!]#0H-"B`@("`@("`@(&-H
+M87);72!C:&%R07)R87D@/2!N97AT3&EN92YT;T-H87)!<G)A>2@I.PT*("`@
+M("`@("`@4W1R:6YG6UT@<W1R:6YG4W!L:70@/2!N97AT3&EN92YS<&QI="@B
+M("(I.PT*("`@("`@("`@:6YT(&D@/2`P.PT*#0H@("`@("`@("!I9B`H*&-H
+M87)!<G)A>5LP72`^(#8T("8F(&-H87)!<G)A>5LP72`\(#DQ*2!\?"`H8VAA
+M<D%R<F%Y6S!=(#X@.38@)B8@8VAA<D%R<F%Y6S!=(#P@,3(S*2D-"B`@("`@
+M("`@("`@(&QA8F5L(#T@<W1R:6YG4W!L:71;,%T[#0H@("`@("`@("!E;'-E
+M#0H@("`@("`@("`@("!L86)E;"`]("(B.PT*#0H@("`@("`@("!I9B`H8VAA
+M<D%R<F%Y+FQE;F=T:"`^(#$P*0T*("`@("`@("`@("`@:68@*"AC:&%R07)R
+M87E;,3%=(#X@-C0@)B8@8VAA<D%R<F%Y6S$Q72`\(#DQ*2!\?"`H8VAA<D%R
+M<F%Y6S$Q72`^(#DV("8F(&-H87)!<G)A>5LQ,5T@/"`Q,C,I*0T*("`@("`@
+M("`@("`@("`@9F]R("AI(#T@,3L@:2`\('-T<FEN9U-P;&ET+FQE;F=T:#L@
+M:2LK*0T*("`@("`@("`@("`@("`@("`@:68@*'-T<FEN9U-P;&ET6VE=+F-O
+M;7!A<F54;R@B("(I("$](#`@)B8@<W1R:6YG4W!L:71;:5TN8V]M<&%R951O
+M*"(B*2`A/2`P("8F#0H@("`@("`@("`@("`@("`@("`@("`@("`@('-T<FEN
+M9U-P;&ET6VE=+F-O;7!A<F54;R@B7'0B*2`A/2`P*2![#0H@("`@("`@("`@
+M("`@("`@("`@("!M;F5M;VYI8R`]('-T<FEN9U-P;&ET6VE=.PT*("`@("`@
+M("`@("`@("`@("`@("`@8G)E86L[#0H@("`@("`@("`@("`@("`@("!]#0H-
+M"B`@("`@("`@(&EN="!K(#T@,#L-"@T*("`@("`@("`@9F]R("AI;G0@:B`]
+M(#$X.R!J(#P@8VAA<D%R<F%Y+FQE;F=T:#L@:BLK*2![#0H@("`@("`@("`@
+M("!I9B`H:B`^(#$X("8F(&H@/"`S,2D-"B`@("`@("`@("`@("`@(&EF("@H
+M8VAA<D%R<F%Y6VI=(#X@-C0@)B8@8VAA<D%R<F%Y6VI=(#P@.3$I('Q\("AC
+M:&%R07)R87E;:ET@/B`Y-B`F)B!C:&%R07)R87E;:ET@/"`Q,C,I('Q\("AC
+M:&%R07)R87E;:ET@/B`T-R`F)B!C:&%R07)R87E;:ET@/"`U."DI('L-"B`@
+M("`@("`@("`@("`@("`@(&9O<B`H:R`](&D@*R`Q.R!K(#P@<W1R:6YG4W!L
+M:70N;&5N9W1H.R!K*RLI('L-"B`@("`@("`@("`@("`@("`@("`@(&EF("AS
+M=')I;F=3<&QI=%MK72YC;VUP87)E5&\H(B`B*2`A/2`P("8F('-T<FEN9U-P
+M;&ET6VM=+F-O;7!A<F54;R@B(BD@(3T@,"`F)@T*("`@("`@("`@("`@("`@
+M("`@("`@("`@("`@("!S=')I;F=3<&QI=%MK72YC;VUP87)E5&\H(EQT(BD@
+M(3T@,"D@>PT*("`@("`@("`@("`@("`@("`@("`@("`@;W!E<F%N9"`]('-T
+M<FEN9U-P;&ET6VM=.PT*("`@("`@("`@("`@("`@("`@("`@("`@8G)E86L[
+M#0H@("`@("`@("`@("`@("`@("`@("!]#0H@("`@("`@("`@("`@("`@("!]
+M#0H@("`@("`@("`@("`@("`@("!B<F5A:SL-"B`@("`@("`@("`@("`@('T-
+M"B`@("`@("`@('T-"@T*("`@("`@("`@9F]R("AI;G0@;2`](&L@*R`Q.R!M
+M(#P@<W1R:6YG4W!L:70N;&5N9W1H.R!M*RLI#0H@("`@("`@("`@("!I9B`H
+M<W1R:6YG4W!L:71;:UTN8V]M<&%R951O*"(@(BD@(3T@,"`F)B!S=')I;F=3
+M<&QI=%MK72YC;VUP87)E5&\H(B(I("$](#`@)B8@<W1R:6YG4W!L:71;:UTN
+M8V]M<&%R951O*")<="(I("$](#`I('L-"B`@("`@("`@("`@("`@(&-O;6UE
+M;G0@*ST@<W1R:6YG4W!L:71;;5T@*R`B("([#0H@("`@("`@("`@("`@("!C
+M;VUM96YT+G1R:6TH*3L-"B`@("`@("`@("`@('T-"B`@("`@('T-"@T*("`@
+M("`@<'5B;&EC(%-T<FEN9R!T;U-T<FEN9R@I('L-"B`@("`@("`@(')E='5R
+M;B!L;V-A=&EO;B`K("(@("`B("L@;V)J96-T0V]D92`K(&]P97)A;F1!9&1R
+M97-S("L@(B`@("`@("`B("L@;&%B96P@*R`B("`B("L@(B`@(B`K(&UN96UO
+M;FEC("L@(B`@(B`K(&]P97)A;F0@*R`B("`B("L@8V]M;65N=#L-"B`@("`@
+M('T-"@T*("`@("`@<'5B;&EC(%-T<FEN9R!G971/<&5R86YD061D<F5S<R@I
+M('L-"B`@("`@("`@(')E='5R;B!O<&5R86YD061D<F5S<SL-"B`@("`@('T-
+M"@T*("`@("`@<'5B;&EC(%-T<FEN9R!G971497AT3&EN92@I('L-"B`@("`@
+M("`@(')E='5R;B!O8FIE8W1#;V1E("L@;W!E<F%N9$%D9')E<W,[#0H@("`@
+M("!]#0H-"B`@("`@('!U8FQI8R!3=')I;F<@9V5T3&%B96PH*2![#0H@("`@
+M("`@("!R971U<FX@;&%B96P[#0H@("`@("!]#0H-"B`@("`@('!U8FQI8R!3
+M=')I;F<@9V5T36YE;6]N:6,H*2![#0H@("`@("`@("!R971U<FX@;6YE;6]N
+M:6,[#0H@("`@("!]#0H-"B`@("`@('!U8FQI8R!3=')I;F<@9V5T3W!E<F%N
+M9"@I('L-"B`@("`@("`@(')E='5R;B!O<&5R86YD.PT*("`@("`@?0T*#0H@
+M("`@("!P=6)L:6,@4W1R:6YG(&=E=$-O;6UE;G0H*2![#0H@("`@("`@("!R
+M971U<FX@8V]M;65N=#L-"B`@("`@('T-"@T*("`@("`@<'5B;&EC(&)O;VQE
+M86X@:7-#;VUM96YT*"D@>PT*("`@("`@("`@<F5T=7)N(&ES0V]M;65N=#L-
+M"B`@("`@('T-"@T*("`@("`@<'5B;&EC(%-T<FEN9R!G971/8FIE8W1#;V1E
+M*"D@>PT*("`@("`@("`@<F5T=7)N(&]B:F5C=$-O9&4[#0H@("`@("!]#0H-
+M"B`@("`@('!U8FQI8R!3=')I;F<@9V5T3&]C871I;VXH*2![#0H@("`@("`@
+M("!R971U<FX@;&]C871I;VX[#0H@("`@("!]#0H-"B`@("`@('!U8FQI8R!V
+M;VED('-E=$]B:F5C=$-O9&4H4W1R:6YG(&]B:F5C=$-O9&4I('L-"B`@("`@
+M("`@('1H:7,N;V)J96-T0V]D92`](&]B:F5C=$-O9&4N=&]5<'!E<D-A<V4H
+M*2`K("(P(CL-"B`@("`@('T-"@T*("`@("`@<'5B;&EC('9O:60@<V5T3W!E
+M<F%N9$%D9')E<W,H4W1R:6YG(&]P97)A;F1!9&1R97-S*2![#0H@("`@("`@
+M("!T:&ES+F]P97)A;F1!9&1R97-S(#T@;W!E<F%N9$%D9')E<W,N=&]5<'!E
+M<D-A<V4H*3L-"B`@("`@('T-"@T*("`@("`@<'5B;&EC('9O:60@<V5T3&]C
+M871I;VXH4W1R:6YG(&QO8V%T:6]N*2![#0H-"B`@("`@("`@('=H:6QE("AT
+M<G5E*2![#0H@("`@("`@("`@("!I9B`H;&]C871I;VXN;&5N9W1H*"D@(3T@
+M-BD-"B`@("`@("`@("`@("`@(&EF("AL;V-A=&EO;BYL96YG=&@H*2`\(#8I
+M#0H@("`@("`@("`@("`@("`@("!L;V-A=&EO;B`]("(P(B`K(&QO8V%T:6]N
+M.PT*("`@("`@("`@("`@("`@96QS90T*("`@("`@("`@("`@("`@("`@8G)E
+M86L[#0H@("`@("`@("`@("!E;'-E#0H@("`@("`@("`@("`@("!B<F5A:SL-
+M"B`@("`@("`@('T-"@T*("`@("`@("`@=&AI<RYL;V-A=&EO;B`](&QO8V%T
+M:6]N+G1O57!P97)#87-E*"D[#0H@("`@("!]#0H-"B`@("`@('!U8FQI8R!V
+M;VED('-E=%-T87)T3V)J96-T0V]D92@I('L-"B`@("`@("`@(&]B:F5C=$-O
+M9&4@/2`B("`@(CL-"B`@("`@("`@(&]P97)A;F1!9&1R97-S(#T@(B`@("([
+M#0H@("`@("!]#0H-"B`@("`@('!U8FQI8R!V;VED('-E=$]B:F5C=$-O9&5&
+M;W)7;W)D*%-T<FEN9R!O8FIE8W1#;V1E*2![#0H@("`@("`@("!O<&5R86YD
+M061D<F5S<R`]("(B.PT*#0H@("`@("`@("!W:&EL92`H=')U92D@>PT*("`@
+M("`@("`@("`@:68@*&]B:F5C=$-O9&4N;&5N9W1H*"D@(3T@-BD-"B`@("`@
+M("`@("`@("`@(&EF("AO8FIE8W1#;V1E+FQE;F=T:"@I(#P@-BD-"B`@("`@
+M("`@("`@("`@("`@(&]B:F5C=$-O9&4@/2`B,"(@*R!O8FIE8W1#;V1E.PT*
+M("`@("`@("`@("`@("`@96QS90T*("`@("`@("`@("`@("`@("`@8G)E86L[
+M#0H@("`@("`@("`@("!E;'-E#0H@("`@("`@("`@("`@("!B<F5A:SL-"B`@
+M("`@("`@('T-"@T*("`@("`@("`@=&AI<RYO8FIE8W1#;V1E(#T@;V)J96-T
+M0V]D93L-"B`@("`@('T-"@T*("`@("`@<'5B;&EC('9O:60@<V5T3V)J96-T
+M0V]D949O<D)Y=&4H4W1R:6YG(&]B:F5C=$-O9&4I('L-"B`@("`@("`@(&]P
+M97)A;F1!9&1R97-S(#T@(B([#0H-"B`@("`@("`@('1H:7,N;V)J96-T0V]D
+M92`](&]B:F5C=$-O9&4N=&]5<'!E<D-A<V4H*3L-"B`@("`@('T-"@T*("`@
+M("`@<'5B;&EC('9O:60@<V5T0V]M;65N=$-O9&4H*2![#0H@("`@("`@("!S
+M9713=&%R=$]B:F5C=$-O9&4H*3L-"B`@("`@('T-"@T*("`@("`@<'5B;&EC
+M('9O:60@<V5T16YD0V]D92@I('L-"B`@("`@("`@('-E=%-T87)T3V)J96-T
+M0V]D92@I.PT*("`@("`@?0T*#0H@("`@("!P=6)L:6,@8F]O;&5A;B!I<T]B
+M:F5C=$-O9&5%;7!T>2@I('L-"B`@("`@("`@(&EF("AO8FIE8W1#;V1E(#T]
+M(&YU;&P@?'P@;V)J96-T0V]D92YC;VUP87)E5&\H(B(I(#T](#`I#0H@("`@
+M("`@("`@("!R971U<FX@=')U93L-"B`@("`@("`@(&5L<V4@>PT*("`@("`@
+M("`@("`@8VAA<EM=(&-H87)!<G)A>2`](&]B:F5C=$-O9&4N=&]#:&%R07)R
+M87DH*3L-"@T*("`@("`@("`@("`@9F]R("AC:&%R('1H:7-#:&%R(#H@8VAA
+M<D%R<F%Y*0T*("`@("`@("`@("`@("`@:68@*'1H:7-#:&%R("$]("<@)RD-
+M"B`@("`@("`@("`@("`@("`@(')E='5R;B!F86QS93L-"B`@("`@("`@('T-
+M"@T*("`@("`@("`@<F5T=7)N(&9A;'-E.PT*("`@("`@?0T*#0H@("`@("!P
+M=6)L:6,@=F]I9"!A9&1.*"D@>PT*("`@("`@("`@:68@*"%I<T]B:F5C=$-O
+M9&5%;7!T>2@I*2![#0H@("`@("`@("`@("!C:&%R6UT@8VAA<D%R<F%Y(#T@
+M;V)J96-T0V]D92YT;T-H87)!<G)A>2@I.PT*("`@("`@("`@("`@8VAA<D%R
+M<F%Y6S%=(#T@26YT96=E<BYT;TAE>%-T<FEN9RA);G1E9V5R+G!A<G-E26YT
+M*"(B("L@;V)J96-T0V]D92YC:&%R070H,2DL(#$V*2`K(#(I+F-H87)!="@P
+M*3L-"B`@("`@("`@("`@(&]B:F5C=$-O9&4@/2!N97<@4W1R:6YG*&-H87)!
+M<G)A>2DN=&]5<'!E<D-A<V4H*3L-"B`@("`@("`@('T-"B`@("`@('T-"@T*
+M("`@("`@<'5B;&EC('9O:60@861D22@I('L-"B`@("`@("`@(&EF("@A:7-/
+M8FIE8W1#;V1E16UP='DH*2D@>PT*("`@("`@("`@("`@8VAA<EM=(&-H87)!
+M<G)A>2`](&]B:F5C=$-O9&4N=&]#:&%R07)R87DH*3L-"B`@("`@("`@("`@
+M(&-H87)!<G)A>5LQ72`]($EN=&5G97(N=&](97A3=')I;F<H26YT96=E<BYP
+M87)S94EN="@B(B`K(&]B:F5C=$-O9&4N8VAA<D%T*#$I+"`Q-BD@*R`Q*2YC
+M:&%R070H,"D[#0H@("`@("`@("`@("!O8FIE8W1#;V1E(#T@;F5W(%-T<FEN
+M9RAC:&%R07)R87DI+G1O57!P97)#87-E*"D[#0H@("`@("`@("!]#0H@("`@
+M("!]#0H-"B`@("`@('!U8FQI8R!V;VED(&%D9$Y)*"D@>PT*("`@("`@("`@
+M:68@*"%I<T]B:F5C=$-O9&5%;7!T>2@I*2![#0H@("`@("`@("`@("!C:&%R
+M6UT@8VAA<D%R<F%Y(#T@;V)J96-T0V]D92YT;T-H87)!<G)A>2@I.PT*("`@
+M("`@("`@("`@8VAA<D%R<F%Y6S%=(#T@26YT96=E<BYT;TAE>%-T<FEN9RA)
+M;G1E9V5R+G!A<G-E26YT*"(B("L@;V)J96-T0V]D92YC:&%R070H,2DL(#$V
+M*2`K(#,I+F-H87)!="@P*3L-"B`@("`@("`@("`@(&]B:F5C=$-O9&4@/2!N
+M97<@4W1R:6YG*&-H87)!<G)A>2DN=&]5<'!E<D-A<V4H*3L-"B`@("`@("`@
+M('T-"B`@("`@('T-"@T*("`@("`@<'5B;&EC('9O:60@861D6"@I('L-"B`@
+M("`@("`@(&EF("@A:7-/8FIE8W1#;V1E16UP='DH*2D@>PT*("`@("`@("`@
+M("`@8VAA<EM=(&-H87)!<G)A>2`](&]B:F5C=$-O9&4N=&]#:&%R07)R87DH
+M*3L-"B`@("`@("`@("`@(&-H87)!<G)A>5LR72`]($EN=&5G97(N=&](97A3
+M=')I;F<H26YT96=E<BYP87)S94EN="@B(B`K(&]B:F5C=$-O9&4N8VAA<D%T
+M*#(I+"`Q-BD@*R`X*2YC:&%R070H,"D[#0H@("`@("`@("`@("!O8FIE8W1#
+M;V1E(#T@;F5W(%-T<FEN9RAC:&%R07)R87DI+G1O57!P97)#87-E*"D[#0H@
+M("`@("`@("!]#0H@("`@("!]#0H-"B`@("`@('!U8FQI8R!V;VED(&%D9$(H
+M*2![#0H@("`@("`@("!I9B`H(6ES3V)J96-T0V]D945M<'1Y*"DI('L-"B`@
+M("`@("`@("`@(&-H87);72!C:&%R07)R87D@/2!O8FIE8W1#;V1E+G1O0VAA
+M<D%R<F%Y*"D[#0H@("`@("`@("`@("!C:&%R07)R87E;,ET@/2!);G1E9V5R
+M+G1O2&5X4W1R:6YG*$EN=&5G97(N<&%R<V5);G0H(B(@*R!O8FIE8W1#;V1E
+M+F-H87)!="@R*2P@,38I("L@-"DN8VAA<D%T*#`I.PT*("`@("`@("`@("`@
+M;V)J96-T0V]D92`](&YE=R!3=')I;F<H8VAA<D%R<F%Y*2YT;U5P<&5R0V%S
+M92@I.PT*("`@("`@("`@?0T*("`@("`@?0T*#0H@("`@("!P=6)L:6,@=F]I
+M9"!A9&10*"D@>PT*("`@("`@("`@:68@*"%I<T]B:F5C=$-O9&5%;7!T>2@I
+M*2![#0H@("`@("`@("`@("!C:&%R6UT@8VAA<D%R<F%Y(#T@;V)J96-T0V]D
+M92YT;T-H87)!<G)A>2@I.PT*("`@("`@("`@("`@8VAA<D%R<F%Y6S)=(#T@
+M26YT96=E<BYT;TAE>%-T<FEN9RA);G1E9V5R+G!A<G-E26YT*"(B("L@;V)J
+M96-T0V]D92YC:&%R070H,BDL(#$V*2`K(#(I+F-H87)!="@P*3L-"B`@("`@
+M("`@("`@(&]B:F5C=$-O9&4@/2!N97<@4W1R:6YG*&-H87)!<G)A>2DN=&]5
+M<'!E<D-A<V4H*3L-"B`@("`@("`@('T-"B`@("`@('T-"@T*("`@("`@<'5B
+M;&EC('9O:60@861D12@I('L-"B`@("`@("`@(&EF("@A:7-/8FIE8W1#;V1E
+M16UP='DH*2D@>PT*("`@("`@("`@("`@8VAA<EM=(&-H87)!<G)A>2`](&]B
+M:F5C=$-O9&4N=&]#:&%R07)R87DH*3L-"B`@("`@("`@("`@(&-H87)!<G)A
+M>5LR72`]($EN=&5G97(N=&](97A3=')I;F<H26YT96=E<BYP87)S94EN="@B
+M(B`K(&]B:F5C=$-O9&4N8VAA<D%T*#(I+"`Q-BD@*R`Q*2YC:&%R070H,"D[
+M#0H@("`@("`@("`@("!O8FIE8W1#;V1E(#T@;F5W(%-T<FEN9RAC:&%R07)R
+M87DI+G1O57!P97)#87-E*"D[#0H@("`@("`@("!]#0H@("`@("!]#0H-"B`@
+M("`@('!U8FQI8R!V;VED($-L96%R*"D@>PT*("`@("`@("`@:68@*"%I<T]B
+M:F5C=$-O9&5%;7!T>2@I*2![#0H@("`@("`@("`@("!C:&%R6UT@8VAA<D%R
+M<F%Y(#T@;V)J96-T0V]D92YT;T-H87)!<G)A>2@I.PT*("`@("`@("`@("`@
+M8VAA<D%R<F%Y6S)=(#T@)UPP)SL-"B`@("`@("`@("`@(&]B:F5C=$-O9&4@
+M/2!N97<@4W1R:6YG*&-H87)!<G)A>2DN=&]5<'!E<D-A<V4H*3L-"B`@("`@
+M("`@('T-"B`@("`@('T-"@T*("`@("`@<'5B;&EC(&)O;VQE86X@;F],86)E
+M;%1I;64H*2![#0H@("`@("`@("!3=')I;F=;72!T>7!E<R`]('LB4D535R(L
+M(")"651%(BP@(E=/4D0B+"`B4D530B)].PT*("`@("`@("`@:68@*&=E=$QA
+M8F5L*"DN8V]M<&%R951O26=N;W)E0V%S92@B(BD@/3T@,"D@>PT*("`@("`@
+M("`@("`@4W1R:6YG(&QO8V%L(#T@9V5T36YE;6]N:6,H*3L-"B`@("`@("`@
+M("`@(&9O<B`H:6YT(&D@/2`P.R!I(#P@='EP97,N;&5N9W1H.R!I*RLI('L-
+M"B`@("`@("`@("`@("`@(&EF("AL;V-A;"YE<75A;',H='EP97-;:5TI*2![
+M#0H@("`@("`@("`@("`@("`@("!R971U<FX@=')U93L-"B`@("`@("`@("`@
+M("`@('T-"B`@("`@("`@("`@('T-"B`@("`@("`@('T-"B`@("`@("`@(')E
+M='5R;B!F86QS93L-"B`@("`@('T-"@T*("`@("`@<'5B;&EC(%-T<FEN9R!S
+M:6U/<&5R86YD*"D@>PT*("`@("`@("`@4W1R:6YG(&UO<F]N(#T@(B([#0H@
+M("`@("`@("!3=')I;F<@:&EG:"`](&=E=$]P97)A;F0H*2YT;U5P<&5R0V%S
+M92@I.PT*("`@("`@("`@9F]R("AI;G0@:2`](#`[(&D@/"!G971/<&5R86YD
+M*"DN;&5N9W1H*"D[(&DK*RD@>PT*("`@("`@("`@("`@:68@*&AI9V@N8VAA
+M<D%T*&DI(#X]("=!)R`F)B!H:6=H+F-H87)!="AI*2`\/2`G6B<I('L-"B`@
+M("`@("`@("`@("`@(&UO<F]N("L]("A#:&%R86-T97(N=&]3=')I;F<H:&EG
+M:"YC:&%R070H:2DI*3L-"B`@("`@("`@("`@('T-"B`@("`@("`@('T-"B`@
+M("`@("`@(')E='5R;B!M;W)O;CL-"B`@("`@('T-"@T*("`@("`@<'5B;&EC
+M(&)O;VQE86X@:7-.=6U/<&5R86YD*"D@>PT*("`@("`@("`@8F]O;&5A;B!L
+M;V-A;"`]('1R=64[#0H@("`@("`@("!I;G0@:2`](#`[#0H@("`@("`@("!3
+M=')I;F<@:'5R="`](&=E=$]P97)A;F0H*2YT;U5P<&5R0V%S92@I+G1R:6TH
+M*3L-"B`@("`@("`@(&EF("AH=7)T+G-T87)T<U=I=&@H(B,B*2D@>PT*("`@
+M("`@("`@("`@:2`](#$[#0H@("`@("`@("!]#0H@("`@("`@("!F;W(@*#L@
+M:2`\(&AU<G0N;&5N9W1H*"D[(&DK*RD@>PT*("`@("`@("`@("`@:68@*&AU
+M<G0N8VAA<D%T*&DI(#X]("<P)R`F)B!H=7)T+F-H87)!="AI*2`\/2`G.2<I
+M('L-"B`@("`@("`@("`@("`@(')E='5R;B!L;V-A;#L-"B`@("`@("`@("`@
+M('T@96QS92![#0H@("`@("`@("`@("`@("!R971U<FX@9F%L<V4[#0H@("`@
+M("`@("`@("!]#0H@("`@("`@("!]#0H@("`@("`@("!R971U<FX@;&]C86P[
+/#0H@("`@("!]#0H@("!]
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 20 30 00 'NextLineObject.java'; eval "$shar_touch") &&
+  chmod 0644 'NextLineObject.java'
+if test $? -ne 0
+then ${echo} 'restore of NextLineObject.java failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'NextLineObject.java: MD5 check failed'
+       ) << \SHAR_EOF
+85b0154183d66cc9fe8e90fd24f9cf6c  NextLineObject.java
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'NextLineObject.java'` -ne 9240 && \
+  ${echo} 'restoration warning:  size of NextLineObject.java is not 9240'
+  fi
+fi
+# ============= Pass1.java ==============
+if test -f 'Pass1.java' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING Pass1.java (file already exists)'
+else
+${echo} 'x - extracting Pass1.java (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 Pass1.java
+M("`@("\O2&]N>6$@16QF87EO=6UY#0H-"B`@("!I;7!O<G0@:F%V82YI;RY&
+M:6QE.PT*:6UP;W)T(&IA=F$N:6\N1FEL94YO=$9O=6YD17AC97!T:6]N.PT*
+M:6UP;W)T(&IA=F$N:6\N1FEL95=R:71E<CL-"FEM<&]R="!J879A+FEO+E!R
+M:6YT5W)I=&5R.PT*:6UP;W)T(&IA=F$N=71I;"Y#86QE;F1A<CL-"FEM<&]R
+M="!J879A+G5T:6PN1W)E9V]R:6%N0V%L96YD87([#0II;7!O<G0@:F%V82YU
+M=&EL+E-C86YN97([#0II;7!O<G0@:F%V82YU=&EL+F-O;F-U<G)E;G0N3&EN
+M:V5D0FQO8VMI;F=1=65U93L-"@T*("`@<'5B;&EC(&-L87-S(%!A<W,Q>PT*
+M("`@("`@<'5B;&EC(%-)0T]P97)A=&EO;G-486)L92!O<&5R871I;VYS5&%B
+M;&4[#0H@("`@("!P=6)L:6,@4TE#15%55&%B;&4@15%55&%B;&4[#0H@("`@
+M("!P=6)L:6,@4TE#3&%B96Q/8FIE8W1486)L92!S>6UB;VQ486)L92`](&YE
+M=R!324-,86)E;$]B:F5C=%1A8FQE*#$P,"D[#0H@("`-"B`@("`@('!U8FQI
+M8R!&:6QE(&9I;&4[#0H@("`@("!P=6)L:6,@4V-A;FYE<B!I;G!U=#L-"B`@
+M(`D-"B`@("`@('!U8FQI8R!.97AT3&EN94]B:F5C="!T:&ES3&EN93L-"B`@
+M(`D-"B`@("`@('!U8FQI8R!I;G0@<W1A<G1I;F=!9&1R97-S(#T@,#L-"B`@
+M("`@('!U8FQI8R!I;G0@;&]C871I;VY#;W5N=&5R.PT*("`@("`@<'5B;&EC
+M(&EN="!P<F]G<F%M3&5N9W1H.PT*("`@("`@<'5B;&EC(&EN="!L:6YE3G5M
+M8F5R(#T@,3L-"B`@("`@('!U8FQI8R!3=')I;F<@8F%S94QA8F5L(#T@(B([
+M#0H@("`@("!P=6)L:6,@:6YT(&=O5&])5#TM,3L-"B`@(`D-"B`@("`@('!U
+M8FQI8R!,:6YK961";&]C:VEN9U%U975E/$EN=&5G97(^(&QO8V%T:6]N3&ES
+M="`](&YE=R!,:6YK961";&]C:VEN9U%U975E*"D[#0H@("`@("!P=6)L:6,@
+M3&EN:V5D0FQO8VMI;F=1=65U93Q3=')I;F<^(&]P3&ES="`](&YE=R!,:6YK
+M961";&]C:VEN9U%U975E*"D[#0H@("`)#0H-"B`@("`@('!U8FQI8R!087-S
+M,2A3=')I;F<@87)G+"!324-/<&5R871I;VYS5&%B;&4@;W!E<F%T:6]N<U1A
+M8FQE*7L-"B`@("`@("`@('1H:7,N;W!E<F%T:6]N<U1A8FQE(#T@;W!E<F%T
+M:6]N<U1A8FQE.PT*("`@("`@("`@15%55&%B;&4@/2!O<&5R871I;VYS5&%B
+M;&4N9V5T15%55&%B;&4H*3L-"B`@("`@('T-"B`@(`T*("`@("`@<'5B;&EC
+M(%-T<FEN9R!M86EN*%-T<FEN9R!A<F<I>PT*("`@("`@("`@=')Y>PT*("`@
+M("`@("`@("`@9FEL92`](&YE=R!&:6QE*&%R9RD[#0H@("`@("`@("`@("!I
+M;G!U="`](&YE=R!38V%N;F5R*&9I;&4I.PT*("`@("`@("`@?0T*("`@("`@
+M("`@("`@8V%T8V@H1FEL94YO=$9O=6YD17AC97!T:6]N(&4I>PT*("`@("`@
+M("`@("`@("`@4WES=&5M+F]U="YP<FEN=&QN*")&:6QE(&-O=6QD(&YO="!B
+M92!F;W5N9"XB*3L-"B`@("`@("`@("`@("`@(%-Y<W1E;2YE>&ET*"TS*3L-
+M"B`@("`@("`@("`@('T-"B`@("`@(`D)#0H@("`@("`@("!3=')I;F<@;F5W
+M1FEL94YA;64@/2!T:&ES+G-P;&%S:"AA<F<I.PT*("`@("`@"0D-"B`@("`@
+M("`@('1H:7-,:6YE(#T@;F5W($YE>'1,:6YE3V)J96-T*&EN<'5T+FYE>'1,
+M:6YE*"DI.PT*("`@("`@"0D-"B`@("`@("`@(&EF*'1H:7-,:6YE+F=E=$UN
+M96UO;FEC*"DN8V]M<&%R951O26=N;W)E0V%S92@B4U1!4E0B*2`]/2`P*7L-
+M"B`@("`@("`@("`@('-T87)T:6YG061D<F5S<R`]($EN=&5G97(N<&%R<V5)
+M;G0H=&AI<TQI;F4N9V5T3W!E<F%N9"@I+G1R:6TH*2P@,38I.PT*("`@("`@
+M("`@("`@;&]C871I;VY#;W5N=&5R(#T@<W1A<G1I;F=!9&1R97-S.PT*("`@
+M("`@("`@("`@<')I;G14;T9I;&4H=&AI<TQI;F4L(&QI;F5.=6UB97(K*RD[
+M#0H@("`@("`@("`@("!T<GE[#0H@("`@("`@("`@("`@("!L;V-A=&EO;DQI
+M<W0N<'5T*'-T87)T:6YG061D<F5S<RD[#0H@("`@("`@("`@("!]#0H@("`@
+M("`@("`@("`@("!C871C:"A%>&-E<'1I;VX@92E[?0T*("`@("`@("`@("`@
+M=&AI<TQI;F4@/2!N97<@3F5X=$QI;F5/8FIE8W0H:6YP=70N;F5X=$QI;F4H
+M*2D[#0H@("`@("`@("!]#0H@("`@("`@("!E;'-E>PT*("`@("`@("`@("`@
+M;&]C871I;VY#;W5N=&5R(#T@,#L-"B`@("`@("`@('T-"B`@("`@(`D-"B`@
+M("`@("`@('=H:6QE*'1H:7-,:6YE+F=E=$UN96UO;FEC*"DN8V]M<&%R951O
+M26=N;W)E0V%S92@B14Y$(BD@(3T@,"E[#0H@("`@("`@("`@("!I9B@A=&AI
+M<TQI;F4N:7-#;VUM96YT*"DI>PT*("`@("`@("`@("`@("`@:68H=&AI<TQI
+M;F4N9V5T3&%B96PH*2`A/2!N=6QL*7L-"B`@("`@("`@("`@("`@("`@(&EF
+M*'1H:7-,:6YE+F=E=$QA8F5L*"DN8V]M<&%R951O*"(B*2`A/2`P*7L-"B`@
+M("`@("`@("`@("`@("`@("`@(&EF*'-Y;6)O;%1A8FQE+F9I;F0H=&AI<TQI
+M;F4N9V5T3&%B96PH*2D@(3T@+3$I#0H@("`@("`@("`@("`@("`@("`@("`@
+M("!T:&ES3&EN92YD=7!L:6-A=&53>6UB;VP@/2!T<G5E.PT*("`@("`@("`@
+M("`@("`@("`@("`@96QS97L-"B`@("`@("`@("`@("`@("`@("`@("`@('-Y
+M;6)O;%1A8FQE+FEN<V5R="AN97<@;&%B96Q/8FIE8W0H=&AI<TQI;F4N9V5T
+M3&%B96PH*2YT<FEM*"DL(&QO8V%T:6]N0V]U;G1E<BDI.PT*"0D)"0D)"7T-
+M"B`@("`@("`@("`@("`@("`@('T-"B`@("`@("`@("`@("`@('T-"B`@("`@
+M("`@("`@(`D-"B`@("`@("`@("`@("`@(&EN="!F;W5N9%)E='5R;B`](&]P
+M97)A=&EO;G-486)L92YF:6YD*'1H:7-,:6YE+F=E=$UN96UO;FEC*"DI.PT*
+M("`@("`@("`@("`@("`@:68H9F]U;F12971U<FX@(3T@+3$I>PT*("`@("`@
+M("`@("`@("`@("`@;&]C871I;VY#;W5N=&5R("L]("@H4TE#26YS=')U8W1I
+M;VXI;W!E<F%T:6]N<U1A8FQE+F=E=$]B:F5C=$%T*&9O=6YD4F5T=7)N*2DN
+M9V5T0GET95-I>F4H*3L-"B`@("`@("`@("`@("`@("`@('1R>7L-"B`@("`@
+M("`@("`@("`@("`@("`@(&]P3&ES="YP=70H*"A324-);G-T<G5C=&EO;BEO
+M<&5R871I;VYS5&%B;&4N9V5T3V)J96-T070H9F]U;F12971U<FXI*2YG971/
+M4$-O9&4H*2D[#0H@("`@("`@("`@("`@("`@("!]#0H@("`@("`@("`@("`@
+M("`@("`@("!C871C:"A);G1E<G)U<'1E9$5X8V5P=&EO;B!I92E[?0T*("`@
+M("`@("`@("`@("`@("`@=&AI<TQI;F4N=6YD969I;F5D4WEM8F]L/69A;'-E
+M.PT*("`@("`@("`@("`@("`@?0T*("`@("`@("`@("`@("`@96QS92!I9BAT
+M:&ES3&EN92YG971-;F5M;VYI8R@I+F-O;7!A<F54;TEG;F]R94-A<V4H(E=/
+M4D0B*2`]/2`P*0T*("`@("`@("`@("`@("`@("`@;&]C871I;VY#;W5N=&5R
+M("L](#,[#0H@("`@("`@("`@("`@("`)#0H@("`@("`@("`@("`@("!E;'-E
+M(&EF*'1H:7-,:6YE+F=E=$UN96UO;FEC*"DN8V]M<&%R951O26=N;W)E0V%S
+M92@B4D535R(I(#T](#`I#0H@("`@("`@("`@("`@("`@("!L;V-A=&EO;D-O
+M=6YT97(@*ST@*#,@*B!);G1E9V5R+G!A<G-E26YT*'1H:7-,:6YE+F=E=$]P
+M97)A;F0H*2YT<FEM*"DI*3L-"B`@("`@("`@("`@("`@(`D-"B`@("`@("`@
+M("`@("`@(&5L<V4@:68H=&AI<TQI;F4N9V5T36YE;6]N:6,H*2YC;VUP87)E
+M5&])9VYO<F5#87-E*")215-"(BD@/3T@,"D-"B`@("`@("`@("`@("`@("`@
+M(&QO8V%T:6]N0V]U;G1E<B`K/2!);G1E9V5R+G!A<G-E26YT*'1H:7-,:6YE
+M+F=E=$]P97)A;F0H*2YT<FEM*"DI.PT*("`@("`@("`@("`@("`@"0T*("`@
+M("`@("`@("`@("`@96QS92!I9BAT:&ES3&EN92YG971-;F5M;VYI8R@I+F-O
+M;7!A<F54;TEG;F]R94-A<V4H(D)95$4B*2`]/2`P*7L-"B`@("`@("`@("`@
+M("`@("`@(%-T<FEN9R!C;VYS=&%N="`]('1H:7-,:6YE+F=E=$]P97)A;F0H
+M*2YT<FEM*"D[#0H@("`@("`@("`@("`@("`@("!C:&%R(&-O;G-T86YT5'EP
+M92`](&-O;G-T86YT+F-H87)!="@P*3L-"B`@("`@("`@("`@("`@("`@(&EN
+M="!C;VYS=&%N=$EN9&5X(#T@8V]N<W1A;G0N:6YD97A/9B@B)R(I.PT*("`@
+M("`@("`@("`@("`@("`@4W1R:6YG(&-O;G-T86YT4W5B<W1R:6YG(#T@8V]N
+M<W1A;G0N<W5B<W1R:6YG*&-O;G-T86YT26YD97@@*R`Q+"!C;VYS=&%N="YL
+M96YG=&@H*2`M(#$I.PT*("`@("`@("`@("`@("`@"0T*("`@("`@("`@("`@
+M("`@("`@:68H8V]N<W1A;G14>7!E(#T]("=#)R!\?"!C;VYS=&%N=%1Y<&4@
+M/3T@)V,G*0T*("`@("`@("`@("`@("`@("`@("`@;&]C871I;VY#;W5N=&5R
+M("L](&-O;G-T86YT4W5B<W1R:6YG+FQE;F=T:"@I.PT*("`@("`@("`@("`@
+M("`@("`@96QS92!I9BAC;VYS=&%N=%1Y<&4@/3T@)W@G('Q\(&-O;G-T86YT
+M5'EP92`]/2`G6"<I#0H@("`@("`@("`@("`@("`@("`@("!L;V-A=&EO;D-O
+M=6YT97(@*ST@8V]N<W1A;G13=6)S=')I;F<N;&5N9W1H*"D[#0H@("`@("`@
+M("`@("`@("`@("!E;'-E#0H@("`@("`@("`@("`@("`@("`@("!T:&ES3&EN
+M92YI;G9A;&ED0V]N<W1A;G14>7!E(#T@=')U93L-"B`@("`@("`@("`@("`@
+M(`D)#0H@("`@("`@("`@("`@("!]#0H@("`@("`@("`@("`@("!E;'-E(&EF
+M*'1H:7-,:6YE+F=E=$UN96UO;FEC*"DN8V]M<&%R951O26=N;W)E0V%S92@B
+M3%1/4D<B*2`]/2`P*7L-"B`@("`@("`@("`@("`@('T-"B`@("`@("`@("`@
+M("`@(&5L<V4@:68@*'1H:7-,:6YE+F=E=$UN96UO;FEC*"DN8V]M<&%R951O
+M26=N;W)E0V%S92@B0D%312(I(#T](#`I>PT*("`@("`@("`@("`@("`@("`@
+M("`@=&AI<TQI;F4N=6YD969I;F5D4WEM8F]L/69A;'-E.PT*("`@("`@("`@
+M("`@("`@("`@("!B87-E3&%B96P@/2`@=&AI<TQI;F4N9V5T3W!E<F%N9"@I
+M+G1R:6TH*3L-"B`@("`@("`@("`@("`@("`@("`@(&=O5&])5#TQ.PT*("`@
+M("`@("`@("`@("`@?2!E;'-E#0H@("`@("`@("`@("`@("`@("!T:&ES3&EN
+M92YI;G9A;&ED3W!E<F%T:6]N0V]D92`]('1R=64[#0H@("`@("`@("`@("`)
+M"0T*("`@("`@("`@("`@("`@=')Y>PT*("`@("`@("`@("`@("`@("`@;&]C
+M871I;VY,:7-T+G!U="AL;V-A=&EO;D-O=6YT97(I.PT*("`@("`@("`@("`@
+M("`@?0T*("`@("`@("`@("`@("`@("`@8V%T8V@H17AC97!T:6]N(&4I>WT-
+M"B`@("`@("`@("`@('T-"B`@("`@("`@("`@(&EF("AG;U1O250@/3T@,2E[
+M#0H@("`@("`@("`@("`@("!I;G0@82`]('-Y;6)O;%1A8FQE+F9I;F0H8F%S
+M94QA8F5L*3L-"B`@("`@("`@("`@("`@(&EF("AA("$]("TQ*7L-"B`@("`@
+M("`@("`@("`@("`@('-Y;6)O;%1A8FQE+G-E=$QA<W1E<W1"87-E*&$I.PT*
+M("`@("`@("`@("`@("`@("`@9V]4;TE4(#T@,#L-"B`@("`@("`@("`@("`@
+M('T-"B`@("`@("`@("`@('T-"B`@("`@("`@("`@('!R:6YT5&]&:6QE*'1H
+M:7-,:6YE+"!L:6YE3G5M8F5R*RLI.PT*("`@("`@("`@("`@=&AI<TQI;F4@
+M/2!N97<@3F5X=$QI;F5/8FIE8W0H:6YP=70N;F5X=$QI;F4H*2D[#0H@("`@
+M("`@("!]#0H@("`@("`)#0H@("`@("`@("!T<GE[#0H@("`@("`@("`@("!L
+M;V-A=&EO;DQI<W0N<'5T*&QO8V%T:6]N0V]U;G1E<BD[#0H@("`@("`@("!]
+M#0H@("`@("`@("`@("!C871C:"A%>&-E<'1I;VX@92E[?0T*("`@("`@"0T*
+M("`@("`@("`@<')I;G14;T9I;&4H=&AI<TQI;F4L(&QI;F5.=6UB97(K*RD[
+M#0H@("`@("`@("!P<F]G<F%M3&5N9W1H(#T@;&]C871I;VY#;W5N=&5R("T@
+M<W1A<G1I;F=!9&1R97-S.PT*("`@("`@"0T*("`@("`@("`@<F5T=7)N(&YE
+M=T9I;&5.86UE.PT*("`@("`@?0T*("`@"0T*("`@("`@<'5B;&EC(&IA=F$N
+M:6\N4')I;G17<FET97(@;&ES=$]U='!U=#L-"B`@(`D-"B`@("`@('!U8FQI
+M8R!V;VED('!R:6YT5&]&:6QE*$YE>'1,:6YE3V)J96-T('1H:7-,:6YE+"!I
+M;G0@;&EN94YU;6)E<BE[#0H@("`@("`@("!I9BAT:&ES3&EN92YD=7!L:6-A
+M=&53>6UB;VPI#0H@("`@("`@("`@("!L:7-T3W5T<'5T+G!R:6YT;&XH;&EN
+M94YU;6)E<B`K("(@("(@*R!T:&ES3&EN92`K(")<;D524D]2.B!$=7!L:6-A
+M=&4@4WEM8F]L(BD[#0H@("`@("`@("!E;'-E(&EF*'1H:7-,:6YE+FEN=F%L
+M:61/<&5R871I;VY#;V1E*0T*("`@("`@("`@("`@;&ES=$]U='!U="YP<FEN
+M=&QN*&QI;F5.=6UB97(@*R`B("`B("L@=&AI<TQI;F4@*R`B7&Y%4E)/4CH@
+M26YV86QI9"!/<&5R871I;VX@0V]D92(I.PT*("`@("`@("`@96QS92!I9BAT
+M:&ES3&EN92YI;G9A;&ED0V]N<W1A;G14>7!E*0T*("`@("`@("`@("`@;&ES
+M=$]U='!U="YP<FEN=&QN*&QI;F5.=6UB97(@*R`B("`B("L@=&AI<TQI;F4@
+M*R`B7&Y%4E)/4CH@26YV86QI9"!#;VYS=&%N="!4>7!E(BD[#0H@("`@("`@
+M("!E;'-E(&EF*"AT:&ES3&EN92YU;F1E9FEN9613>6UB;VP@("8F(&]P97)A
+M=&EO;G-486)L92YF:6YD*'1H:7-,:6YE+F=E=$UN96UO;FEC*"DI(#T]("TQ
+M*2!\?"!T:&ES3&EN92YN;TQA8F5L5&EM92@I*0T*("`@("`@("`@("`@;&ES
+M=$]U='!U="YP<FEN=&QN*&QI;F5.=6UB97(@*R`B("`B("L@=&AI<TQI;F4@
+M*R`B7&Y%4E)/4CH@3W!E<F%N9"!5;F1E9FEN960@(B`K('1H:7-,:6YE+F=E
+M=$UN96UO;FEC*"DI.PT*("`@("`@("`@96QS90T*("`@("`@("`@("`@;&ES
+M=$]U='!U="YP<FEN=&QN*&QI;F5.=6UB97(@*R`B("`B("L@=&AI<TQI;F4I
+M.PT*("`@("`@?0T*("`@"0T*("`@("`@<'5B;&EC(%-T<FEN9R!S<&QA<V@H
+M4W1R:6YG(&%R9RE[#0H@("`@("`@("!3=')I;F<@;F5W1FEL94YA;64@/2!C
+M<F5A=&5&:6QE*&%R9RD[#0H@("`@("`)#0H@("`@("`@("!#86QE;F1A<B!C
+M86QE;F1A<B`](&YE=R!'<F5G;W)I86Y#86QE;F1A<B@I.PT*("`@("`@#0H@
+M("`@("`@("!3=')I;F<@<W1A<G,@/2!N97<@4W1R:6YG*"(J*BHJ*BHJ*BHJ
+M*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHB*3L-"B`@("`@("`@(%-T
+M<FEN9R!T:71L92`](&YE=R!3=')I;F<H(BH@2&]N>6$@16QF87EO=6UY.B!3
+M25@O6$4@07-S96UB;&5R("HB*3L-"B`@("`@(`D-"B`@("`@("`@(%-T<FEN
+M9R!A<W-E;6)L97)297!O<G0@/2!N97<@4W1R:6YG*")!4U-%34),15(@4D50
+M3U)4(BD[#0H@("`@("`@("!3=')I;F<@9&%S:&5S(#T@;F5W(%-T<FEN9R@B
+M+2TM+2TM+2TM+2TM+2TM+2(I.PT*("`@("`@"0T*("`@("`@("`@4W1R:6YG
+M(&-O;'5M;DAE861E<G,@/2!N97<@4W1R:6YG*"(@("`@($QO8R`@($]B:F5C
+M="!#;V1E("`@("`@(%-O=7)C92!#;V1E(BD[#0H@("`@("`@("!3=')I;F<@
+M8V]L=6UN1&%S:&5S(#T@;F5W(%-T<FEN9R@B("`@("`M+2T@("`M+2TM+2TM
+M+2TM+2`@("`@("`M+2TM+2TM+2TM+2(I.PT*("`@("`@"0D)"0D)"0D)"0D)
+M("`@("`@#0H@("`@("`@("!T<GE[#0H@("`@("`@("`@("!L:7-T3W5T<'5T
+M(#T@;F5W(%!R:6YT5W)I=&5R*&YE=R!&:6QE5W)I=&5R*&YE=T9I;&5.86UE
+M*2P@=')U92D[#0H@("`@("`@("`)#0H@("`@("`@("`@("!L:7-T3W5T<'5T
+M+G!R:6YT;&XH<W1A<G,I.PT*("`@("`@("`@("`@;&ES=$]U='!U="YP<FEN
+M=&QN*'1I=&QE*3L-"B`@("`@("`@("`@(&QI<W1/=71P=70N<')I;G1L;BAS
+M=&%R<RD[#0H@("`@("`@("`@("!L:7-T3W5T<'5T+G!R:6YT;&XH87-S96UB
+M;&5R4F5P;W)T*3L-"B`@("`@("`@("`@(&QI<W1/=71P=70N<')I;G1L;BAD
+M87-H97,I.PT*("`@("`@("`@("`@;&ES=$]U='!U="YP<FEN=&QN*&-O;'5M
+M;DAE861E<G,I.PT*("`@("`@("`@("`@;&ES=$]U='!U="YP<FEN=&QN*&-O
+M;'5M;D1A<VAE<RD[#0H@("`@("`@("!]#0H@("`@("`@("`@("!C871C:"A%
+M>&-E<'1I;VX@92E[?0T*("`@("`@("`@9FEN86QL>7L-"B`@("`@("`@("`@
+M(')E='5R;B!N97=&:6QE3F%M93L-"B`@("`@("`@('T-"B`@("`@('T-"B`@
+M(`D-"B`@("`@('!U8FQI8R!3=')I;F<@8W)E871E1FEL92A3=')I;F<@87)G
+M*7L-"B`@("`@("`@(%-T<FEN9R!N97=&:6QE3F%M92`]("(B.PT*("`@("`@
+M#0H@("`@("`@("!T<GE[#0H@("`@("`@("`@("!I9BAA<F<N:6YD97A/9B@B
+M+B(I("$]("TQ*0T*("`@("`@("`@("`@("`@;F5W($9I;&4H;F5W1FEL94YA
+M;64@/2!A<F<N<W5B<W1R:6YG*#`L(&%R9RYI;F1E>$]F*"(N(BDI("L@(BYL
+M<W0B*2YC<F5A=&5.97=&:6QE*"D[#0H@("`@("`@("`@("`)#0H@("`@("`@
+M("`@("!E;'-E(`T*("`@("`@("`@("`@("`@;F5W($9I;&4H;F5W1FEL94YA
+M;64@/2!A<F<@*R`B+FQS="(I+F-R96%T94YE=T9I;&4H*3L@("`@(`T*("`@
+M("`@("`@?0T*("`@("`@("`@("`@8V%T8V@H17AC97!T:6]N(&4I>PT*("`@
+M("`@("`@("`@("`@92YP<FEN=%-T86-K5')A8V4H*3L-"B`@("`@("`@("`@
+M("`@(%-Y<W1E;2YO=70N<')I;G1L;B@B7&Y!;B!E<G)O<B!H87,@;V-C=7)R
+M960N(%1H:7,@<')O9W)A;2!W:6QL(&YO=R!E>&ET+B(I.PT*("`@("`@("`@
+M("`@?0T*("`@("`@"0D-"B`@("`@("`@(')E='5R;B!N97=&:6QE3F%M93L-
+X."B`@("`@('T-"B`@('T-
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 20 30 01 'Pass1.java'; eval "$shar_touch") &&
+  chmod 0644 'Pass1.java'
+if test $? -ne 0
+then ${echo} 'restore of Pass1.java failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'Pass1.java: MD5 check failed'
+       ) << \SHAR_EOF
+7cb07441286bf550b77705da0d6ee20e  Pass1.java
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'Pass1.java'` -ne 8384 && \
+  ${echo} 'restoration warning:  size of Pass1.java is not 8384'
+  fi
+fi
+# ============= Pass2.java ==============
+if test -f 'Pass2.java' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING Pass2.java (file already exists)'
+else
+${echo} 'x - extracting Pass2.java (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 Pass2.java
+M("`O+TAO;GEA($5L9F%Y;W5M>0T*#0H@("!I;7!O<G0@:F%V82YI;RXJ.PT*
+M("`@:6UP;W)T(&IA=F$N=71I;"XJ.R`@#0H)#0H@("!P=6)L:6,@8VQA<W,@
+M4&%S<S(@97AT96YD<R!087-S,7L-"B`@("`@($9I;&4@9FEL93L-"B`@("`@
+M(%-C86YN97(@:6YP=70[#0H@("`@("!P=6)L:6,@4')I;G17<FET97(@;V)J
+M96-T0V]D94]U='!U=#L-"B`@(`D-"B`@("`@($%R<F%Y3&ES=#Q3=')I;F<^
+M(&]B:F5C=$9I;&4@/2!N97<@07)R87E,:7-T*"D[#0H@("`@("!I;G0@;&]C
+M871I;VY/9DQA<W1%>&5C=71I;VX@/2`Q.PT*("`@("`@:6YT(&QI;F5/9D]B
+M:F5C=$-O9&4@/2`S.PT*("`@("`@:6YT(&QI;F5.=6UB97(@/2`Q.PT*("`@
+M"0T*("`@("`@4W1R:6YG('-T87)T061D<F5S<R`]("(B.PT*("`@("`@4W1R
+M:6YG(&YE>'1,;V-A=&EO;B`]("(P,#`P,#`B.PT*("`@#0H@("`@("!P=6)L
+M:6,@4&%S<S(H4W1R:6YG(&%R9RP@4TE#3W!E<F%T:6]N<U1A8FQE(&]P97)A
+M=&EO;G-486)L92E[#0H@("`@("`@("!S=7!E<BAA<F<L(&]P97)A=&EO;G-4
+M86)L92D[#0H@("`@("`)#0H@("`@("`@("!S=7!E<BYM86EN*&%R9RD[#0H@
+M("`@("`@("!T:&ES+FUA:6XH87)G*3L-"B`@("`@('T-"B`@(`D-"B`@("`@
+M('!U8FQI8R!3=')I;F<@;6%I;BA3=')I;F<@87)G*7L-"B`@("`@("`@('!A
+M<W,R4W!L87-H*&%R9RD[#0H@("`@("`@("!S=7!E<BYS<&QA<V@H87)G*3L-
+M"B`@("`@(`D-"B`@("`@("`@('1R>7L-"B`@("`@("`@("`@(&9I;&4@/2!N
+M97<@1FEL92AA<F<I.PT*("`@("`@("`@("`@:6YP=70@/2!N97<@4V-A;FYE
+M<BAF:6QE*3L-"B`@("`@("`@('T-"B`@("`@("`@("`@(&-A=&-H*$9I;&5.
+M;W1&;W5N9$5X8V5P=&EO;B!E*7L-"B`@("`@("`@("`@("`@(%-Y<W1E;2YO
+M=70N<')I;G1L;B@B1FEL92!C;W5L9"!N;W0@8F4@9F]U;F0N(BD[#0H@("`@
+M("`@("`@("`@("!3>7-T96TN97AI="@M-"D[#0H@("`@("`@("`@("!]#0H@
+M("`@("`)#0H@("`@("`@("!T:&ES3&EN92`](&YE=R!.97AT3&EN94]B:F5C
+M="AI;G!U="YN97AT3&EN92@I*3L-"B`@("`@(`D)#0H@("`@("`@("!I9BAT
+M:&ES3&EN92YG971-;F5M;VYI8R@I+F-O;7!A<F54;TEG;F]R94-A<V4H(E-4
+M05)4(BD@/3T@,"E[#0H@("`@("`@("`@("!T:&ES3&EN92YS971,;V-A=&EO
+M;B@B(B`K($EN=&5G97(N<&%R<V5);G0H=&AI<TQI;F4N9V5T3W!E<F%N9"@I
+M+G1R:6TH*2DI.PT*("`@("`@("`@("`@<W1A<G1!9&1R97-S(#T@=&AI<TQI
+M;F4N9V5T3W!E<F%N9"@I+G1R:6TH*3L-"B`@("`@("`@("`@('1H:7-,:6YE
+M+G-E=%-T87)T3V)J96-T0V]D92@I.PT*("`@("`@("`@("`@<')I;G14;T9I
+M;&4H=&AI<TQI;F4L(&QI;F5.=6UB97(K*RD[#0H@("`@("`@("`)#0H@("`@
+M("`@("`@("!W:&EL92AT<G5E*7L-"B`@("`@("`@("`@("`@(&EF*'-T87)T
+M061D<F5S<RYL96YG=&@H*2`A/2`V*0T*("`@("`@("`@("`@("`@("`@:68H
+M<W1A<G1!9&1R97-S+FQE;F=T:"@I(#P@-BD-"B`@("`@("`@("`@("`@("`@
+M("`@('-T87)T061D<F5S<R`]("(P(B`K('-T87)T061D<F5S<SL-"B`@("`@
+M("`@("`@("`@("`@(&5L<V4-"B`@("`@("`@("`@("`@("`@("`@(&)R96%K
+M.PT*("`@("`@("`@("`@("`@96QS90T*("`@("`@("`@("`@("`@("`@8G)E
+M86L[#0H@("`@("`@("`@("!]#0H@("`@("`@("`@("!T:&ES3&EN92`](&YE
+M=R!.97AT3&EN94]B:F5C="AI;G!U="YN97AT3&EN92@I*3L-"B`@("`@("`@
+M('T-"B`@("`@("`@(&5L<V5[#0H@("`@("`@("`@("!S=&%R=$%D9')E<W,@
+M/2`B,#`P,#`P(CL-"B`@("`@("`@('T-"B`@("`@(`D)#0H@("`@("`@("!O
+M8FIE8W1&:6QE+F%D9"AS=&%R=$%D9')E<W,I.PT*("`@("`@("`@;V)J96-T
+M1FEL92YA9&0H(C`P,#`P,"(I.PT*("`@("`@("`@#0H@("`@("`@("!W:&EL
+M92AT:&ES3&EN92YG971-;F5M;VYI8R@I+F-O;7!A<F54;TEG;F]R94-A<V4H
+M(D5.1"(I("$](#`I>PT*("`@("`@("`@("`@:68H(71H:7-,:6YE+FES0V]M
+M;65N="@I*7L-"B`@("`@("`@("`@("`@('1H:7-,:6YE+G-E=$QO8V%T:6]N
+M*$EN=&5G97(N=&](97A3=')I;F<H;&]C871I;VY,:7-T+G!O;&PH*2DI.PT*
+M("`@("`@("`@("`@("`@+R]3>7-T96TN;W5T+G!R:6YT;&XH=&AI<TQI;F4N
+M9V5T36YE;6]N:6,H*2D[#0H@("`@("`@("`@("`@("!I9BAO<&5R871I;VYS
+M5&%B;&4N9FEN9"AT:&ES3&EN92YG971-;F5M;VYI8R@I*2`A/2`M,2E[#0H@
+M("`@("`@("`@("`@("`@("\O(%-Y<W1E;2YO=70N<')I;G1L;B@B2$5212`B
+M("L@=&AI<TQI;F4N9V5T36YE;6]N:6,H*2`K("(@(B`K('1H:7-,:6YE+F=E
+M=$]P97)A;F0H*2D[#0H@("`@("`@("`@("`@("`@("!T:&ES3&EN92YS971/
+M8FIE8W1#;V1E*&]P3&ES="YP;VQL*"DI.PT*("`@("`@("`@("`@("`@("`@
+M:68@*'1H:7-,:6YE+F=E=$UN96UO;FEC*"DN97%U86QS*")24U5"(BDI('L-
+M"B`@("`@("`@("`@("`@("`@("`@("`@("`@("!T:&ES3&EN92YS971/<&5R
+M86YD061D<F5S<R@B,#`P(BD[#0H@("`@("`@("`@("`@("`@("!](&5L<V4-
+M"@T*("`@("`@("`@("`@("`@("`@:68@*'1H:7-,:6YE+FES3G5M3W!E<F%N
+M9"@I*2![#0H@("`@("`@("`@("`@("`@("`@("!3=')I;F<@8VAE8VL](B([
+M#0H@("`@("`@("`@("`@("`@("`@+R\@(%-Y<W1E;2YO=70N<')I;G1L;B@B
+M2$5213,@(B`K('1H:7-,:6YE+F=E=$UN96UO;FEC*"DI.PT*("`@("`@("`@
+M("`@("`@("`@("`@:68@*'1H:7-,:6YE+F=E=$]P97)A;F0H*2YC;VYT86EN
+M<R@B(R(I*7L-"B`@("`@("`@("`@("`@("`@("`@("`@(&-H96-K(#T@*$EN
+M=&5G97(N=&](97A3=')I;F<H26YT96=E<BYP87)S94EN="AT:&ES3&EN92YG
+M971/<&5R86YD*"DN<W5B<W1R:6YG*#$L=&AI<TQI;F4N9V5T3W!E<F%N9"@I
+M+FQE;F=T:"@I*2PQ-BDI*3L-"B`@("`@("`@("`@("`@("`@("`@("`@("\O
+M4WES=&5M+F]U="YP<FEN=&QN*")(15)%-"`B("L@(&-H96-K+FQE;F=T:"@I
+M*3L-"B`@("`@("`@("`@("`@("`@("`@('UE;'-E>PT*("`@("`@("`@("`@
+M("`@("`@("`@("`@8VAE8VL]("A);G1E9V5R+G1O2&5X4W1R:6YG*$EN=&5G
+M97(N<&%R<V5);G0H=&AI<TQI;F4N9V5T3W!E<F%N9"@I+G-U8G-T<FEN9R@P
+M+'1H:7-,:6YE+F=E=$]P97)A;F0H*2YL96YG=&@H*2DL,38I*2D[#0H@("`@
+M("`@("`@("`@("`@("`@("`@("`O+U-Y<W1E;2YO=70N<')I;G1L;B@B2$52
+M130@(B`K("!C:&5C:RYL96YG=&@H*2D[#0H@("`@("`@("`@("`@("`@("`@
+M("!]#0H@("`@("`@("`@("`@("`@("`@("!I;G0@:2`](&-H96-K+FQE;F=T
+M:"@I.PT*#0H@("`@("`@("`@("`@("`@("`@("!3=')I;F<@=&]G;R`]("(B
+M.PT*("`@("`@("`@("`@("`@("`@("`@=VAI;&4H(&D@/"`S*7L-"B`@("`@
+M("`@("`@("`@("`@("`@("`@('1O9V\@*ST@(C`B.PT*("`@("`@("`@("`@
+M("`@("`@("`@("`@:2LK.PT*("`@("`@("`@("`@("`@("`@("`@?0T*("`@
+M("`@("`@("`@("`@("`@("`@=&AI<TQI;F4N<V5T3W!E<F%N9$%D9')E<W,H
+M('1O9V\@*R!C:&5C:RD[#0H-"@T*("`@("`@("`@("`@("`@?2!E;'-E(&EF
+M*'1H:7-,:6YE+F=E=$UN96UO;FEC*"DN96YD<U=I=&@H(E(B*2E[#0H-"B`@
+M("`@("`@("`@("`@("`@("`@(%-T<FEN9UM=(&]U8V@@/2!T:&ES3&EN92YG
+M971/<&5R86YD*"DN=')I;2@I+G-P;&ET*"(L(BD[#0H@("`@("`@("`@("`@
+M("`@("`@("!I;G0@82`](&]P97)A=&EO;G-486)L92YF:6YD*&]U8VA;,%TI
+M.PT*("`@("`@("`@("`@("`@("`@("`@:6YT(&(@/2!O<&5R871I;VYS5&%B
+M;&4N9FEN9"AO=6-H6S%=*3L-"B`@("`@("`@("`@("`@("`@("`@(%-T<FEN
+M9R!F<"`]("@H4TE#26YS=')U8W1I;VXI;W!E<F%T:6]N<U1A8FQE+F=E=$]B
+M:F5C=$%T*&$I*2YG971/4$-O9&4H*3L-"B`@("`@("`@("`@("`@("`@("`@
+M(%-T<FEN9R!S<"`]("@H4TE#26YS=')U8W1I;VXI;W!E<F%T:6]N<U1A8FQE
+M+F=E=$]B:F5C=$%T*&(I*2YG971/4$-O9&4H*3L-"B`@("`@("`@("`@("`@
+M("`@("`@('1H:7-,:6YE+G-E=$]P97)A;F1!9&1R97-S*&9P("L@<W`I.PT*
+M("`@("`@("`@("`@("`@("`@("`@=&AI<TQI;F4N0VQE87(H*3L-"B`@("`@
+M("`@("`@("`@("`@("`@("\O4WES=&5M+F]U="YP<FEN=&QN*")(15)%,B`B
+M("L@=&AI<TQI;F4N9V5T3W!E<F%N9$%D9')E<W,H*2D[#0H-"B`@("`@("`@
+M("`@("`@("`@('T@96QS92!I9B`H:&%S4WEM8F]L*'1H:7-,:6YE+F=E=$]P
+M97)A;F0H*2DI>PT*#0H@("`@("`@("`@("`@("`@("`@("!I;G0@<V5A<F-H
+M4UE-5$%"(#T@<WEM8F]L5&%B;&4N9FEN9"AT:&ES3&EN92YS:6U/<&5R86YD
+M*"DN=')I;2@I*3L-"B`@("`@("`@("`@("`@("`@("`@(&EF*'-E87)C:%-9
+M351!0B`A/2`M,2E[#0H@("`@("`@("`@("`@("`@("`@("`@("!I;G0@4$-2
+M96QA=&EV94%D9')E<W-I;F<@/2`H*&QA8F5L3V)J96-T*7-Y;6)O;%1A8FQE
+M+F=E=$]B:F5C=$%T*'-E87)C:%-9351!0BDI+F=E=$QO8V%T:6]N*"D@+2!L
+M;V-A=&EO;DQI<W0N<&5E:R@I.PT*("`@("`@("`@("`@("`@("`@("`@"6EF
+M("@A=&AI<TQI;F4N9V5T36YE;6]N:6,H*2YC;VYT86EN<R@B*R(I*2![#0H@
+M("`@("`@("`@("`@("`@("`@("`@("`@("!I9B`H4$-296QA=&EV94%D9')E
+M<W-I;F<@/"`R,#0W("8F(%!#4F5L871I=F5!9&1R97-S:6YG(#X@+3(P-#@I
+M('L-"B`@("`@("`@("`@("`@("`@("`@("`@("`@("`@(%-T<FEN9R!H97A3
+M=')I;F<@/2!);G1E9V5R+G1O2&5X4W1R:6YG*%!#4F5L871I=F5!9&1R97-S
+M:6YG*3L-"B`@("`@("`@("`@("`@("`@("`@("`@("`@("`@('1H:7-,:6YE
+M+F%D9%`H*3L-"B`@("`@("`@("`@("`@("`@("`@("`@("`@("`@(&EF("A0
+M0U)E;&%T:79E061D<F5S<VEN9R`^/2`P*2![#0H@("`@("`@("`@("`@("`@
+M("`@("`@("`@("`@("`@("!W:&EL92`H:&5X4W1R:6YG+FQE;F=T:"@I(#P@
+M,RD-"B`@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@(&AE>%-T
+M<FEN9R`]("(P(B`K(&AE>%-T<FEN9SL-"B`@("`@("`@("`@("`@("`@("`@
+M("`@("`@("`@("`@('1H:7-,:6YE+G-E=$]P97)A;F1!9&1R97-S*&AE>%-T
+M<FEN9RD[#0H@("`@("`@("`@("`@("`@("`@("`@("`@("`@("!](&5L<V4-
+M"B`@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@('1H:7-,:6YE+G-E
+M=$]P97)A;F1!9&1R97-S*&AE>%-T<FEN9RYS=6)S=')I;F<H:&5X4W1R:6YG
+M+FQE;F=T:"@I("T@,RP@:&5X4W1R:6YG+FQE;F=T:"@I*2D[#0H@("`@("`@
+M("`@("`@("`@("`@("`@("`@("!](&5L<V4@>PT*("`@("`@("`@("`@("`@
+M("`@("`@("`@("`@("`@:6YT(&)A<V5);G0@/2`H*&QA8F5L3V)J96-T*7-Y
+M;6)O;%1A8FQE+F=E=$]B:F5C=$%T*'-Y;6)O;%1A8FQE+F=E=$QA<W1E<W1"
+M87-E*"DI*2YG971,;V-A=&EO;B@I.PT*("`@("`@("`@("`@("`@("`@("`@
+M("`@("`@("`@:6YT(&UA:6Y);G0@/2`H*&QA8F5L3V)J96-T*7-Y;6)O;%1A
+M8FQE+F=E=$]B:F5C=$%T*'-E87)C:%-9351!0BDI+F=E=$QO8V%T:6]N*"D[
+M#0H@("`@("`@("`@("`@("`@("`@("`@("`@("`@("!3=')I;F<@9V]O9$YO
+M=R`]($EN=&5G97(N=&](97A3=')I;F<H;6%I;DEN="`M(&)A<V5);G0I.PT*
+M("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@=VAI;&4@*&=O;V1.;W<N
+M;&5N9W1H*"D@/"`S*0T*("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@
+M("`@9V]O9$YO=R`]("(P(B`K(&=O;V1.;W<[#0H@("`@("`@("`@("`@("`@
+M("`@("`@("`@("`@("!T:&ES3&EN92YS971/<&5R86YD061D<F5S<RAG;V]D
+M3F]W*3L-"B`@("`@("`@("`@("`@("`@("`@("`@("`@("`@('1H:7-,:6YE
+M+F%D9$(H*3L-"B`@("`@("`@("`@("`@("`@("`@("`@("`@('T-"B`@("`@
+M("`@("`@("`@("`@("`@("`@('T@96QS97L-"B`@("`@("`@("`@("`@("`@
+M("`@("`@("`@(&EN="!A(#T@*"AL86)E;$]B:F5C="ES>6UB;VQ486)L92YG
+M971/8FIE8W1!="AS96%R8VA364U404(I*2YG971,;V-A=&EO;B@I.PT*("`@
+M("`@("`@("`@("`@("`@("`@("`@("`@4W1R:6YG(&QO8V%L:&5X(#T@26YT
+M96=E<BYT;TAE>%-T<FEN9RAA*3L-"B`@("`@("`@("`@("`@("`@("`@("`@
+M("`@(&EF("AL;V-A;&AE>"YL96YG=&@H*2`\("`U*2![#0H@("`@("`@("`@
+M("`@("`@("`@("`@("`@("`@("!3=')I;F<@=&5M<"`]("(P(CL-"B`@("`@
+M("`@("`@("`@("`@("`@("`@("`@("`@(&9O<B`H:6YT(&D@/2!L;V-A;&AE
+M>"YL96YG=&@H*3L@:2`\(#4[(&DK*RD@>PT*("`@("`@("`@("`@("`@("`@
+M("`@("`@("`@("`@("`@;&]C86QH97@@/2!T96UP("L@;&]C86QH97@[#0H@
+M("`@("`@("`@("`@("`@("`@("`@("`@("`@("!]#0H@("`@("`@("`@("`@
+M("`@("`@("`@("`@("!]#0H@("`@("`@("`@("`@("`@("`@("`@("`@("!T
+M:&ES3&EN92YS971/<&5R86YD061D<F5S<RAL;V-A;&AE>"D[#0H@("`@("`@
+M("`@("`@("`@("`@("`@("!]#0H@("`@("`@("`@("`@("`@("`@("!]#0H@
+M("`@("`@("`@("`@("`@("`@("!E;'-E>PT*("`@("`@("`@("`@("`@("`@
+M("`@("`@:68H=&AI<TQI;F4N9V5T3W!E<F%N9"@I+G1R:6TH*2YI;F1E>$]F
+M*"<L)RD@(3T@+3$I>PT*("`@("`@("`@("`@("`@("`@("`@("`@("`@4W1R
+M:6YG6UT@<W!L:71/<&5R86YD(#T@=&AI<TQI;F4N9V5T3W!E<F%N9"@I+G1R
+M:6TH*2YS<&QI="@B+"(I.PT*#0H@("`@("`@("`@("`@("`@("`@("`@("`@
+M("!I9BAS<&QI=$]P97)A;F1;,5TN8V]M<&%R951O26=N;W)E0V%S92@B6"(I
+M(#T](#`I>R`O+R!);F1E>&EN9PT*("`@("`@("`@("`@("`@("`@("`@("`@
+M("`@("`@:68H<WEM8F]L5&%B;&4N9FEN9"AS<&QI=$]P97)A;F1;,%TI("$]
+M("TQ*7L-"B`@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@(&EN="!0
+M0U)E;&%T:79E061D<F5S<VEN9R`]("@H;&%B96Q/8FIE8W0I<WEM8F]L5&%B
+M;&4N9V5T3V)J96-T070H<WEM8F]L5&%B;&4N9FEN9"AS<&QI=$]P97)A;F1;
+M,%TI*2DN9V5T3&]C871I;VXH*2`M(&QO8V%T:6]N3&ES="YP965K*"D[#0H@
+M("`@("`@("`@("`@("`@("`@("`@("`@("`@("`-"B`@("`@("`@("`@("`@
+M("`@("`@("`@("`@("`@("`@(&EF*%!#4F5L871I=F5!9&1R97-S:6YG(#P@
+M,C`T-R`F)B!00U)E;&%T:79E061D<F5S<VEN9R`^("TR,#0X*7L-"B`@("`@
+M("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@(%-T<FEN9R!H97A3=')I
+M;F<@/2!);G1E9V5R+G1O2&5X4W1R:6YG*%!#4F5L871I=F5!9&1R97-S:6YG
+M*3L-"@D)"0D)"0D)"0D)"71H:7-,:6YE+F%D9%`H*3L-"B`@("`@("`@("`@
+M("`@("`@("`@("`@("`@("`@("`@(`T*("`@("`@("`@("`@("`@("`@("`@
+M("`@("`@("`@("`@("`@:68H4$-296QA=&EV94%D9')E<W-I;F<@/CT@,"E[
+M#0H@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`-"B`@("`@
+M("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@('=H:6QE*&AE>%-T
+M<FEN9RYL96YG=&@H*2`\(#,I#0H@("`@("`@("`@("`@("`@("`@("`@("`@
+M("`@("`@("`@("`@("`@("!H97A3=')I;F<@/2`B,"(@*R!H97A3=')I;F<[
+M#0H@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`-"B`@("`@
+M("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@('1H:7-,:6YE+G-E
+M=$]P97)A;F1!9&1R97-S*&AE>%-T<FEN9RD[#0H@("`@("`@("`@("`@("`@
+M("`@("`@("`@("`@("`@("`@("!]#0H@("`@("`@("`@("`@("`@("`@("`@
+M("`@("`@("`@("`@("!E;'-E#0H@("`@("`@("`@("`@("`@("`@("`@("`@
+M("`@("`@("`@("`@("!T:&ES3&EN92YS971/<&5R86YD061D<F5S<RAH97A3
+M=')I;F<N<W5B<W1R:6YG*&AE>%-T<FEN9RYL96YG=&@H*2`M(#,L(&AE>%-T
+M<FEN9RYL96YG=&@H*2DI.PT*("`@("`@("`@("`@("`@("`@("`@("`@("`@
+M("`@("`@?0T*("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@96QS
+M97L-"B`@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@(&EN="!B
+M87-E26YT(#T@*"AL86)E;$]B:F5C="ES>6UB;VQ486)L92YG971/8FIE8W1!
+M="AS>6UB;VQ486)L92YG971,87-T97-T0F%S92@I*2DN9V5T3&]C871I;VXH
+M*3L-"B`@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@(&EN="!M
+M86EN26YT(#T@*"AL86)E;$]B:F5C="ES>6UB;VQ486)L92YG971/8FIE8W1!
+M="AS96%R8VA364U404(I*2YG971,;V-A=&EO;B@I.PT*("`@("`@("`@("`@
+M("`@("`@("`@("`@("`@("`@("`@("`@4W1R:6YG(&=O;V1.;W<@/2!);G1E
+M9V5R+G1O2&5X4W1R:6YG*&UA:6Y);G0@+2!B87-E26YT*3L-"B`@("`@("`@
+M("`@("`@("`@("`@("`@("`@("`@("`@("`@('=H:6QE("AG;V]D3F]W+FQE
+M;F=T:"@I(#P@,RD-"B`@("`@("`@("`@("`@("`@("`@("`@("`@("`@("`@
+M("`@("`@(&=O;V1.;W<@/2`B,"(@*R!G;V]D3F]W.PT*("`@("`@("`@("`@
+M("`@("`@("`@("`@("`@("`@("`@("`@=&AI<TQI;F4N<V5T3W!E<F%N9$%D
+M9')E<W,H9V]O9$YO=RD[#0H@("`@("`@("`@("`@("`@("`@("`@("`@("`@
+M("`@("`@("!T:&ES3&EN92YA9&1"*"D[#0H-"B`@("`@("`@("`@("`@("`@
+M("`@("`@("`@("`@("`@('T-"B`@("`@("`@("`@("`@("`@("`@("`@("`@
+M("`@('T-"@D)"0D)"0D)"0D-"@D)"0D)"0D)"0ET:&ES3&EN92YA9&18*"D[
+M#0H@("`@("`@("`@("`@("`@("`@("`@("`@("!]#0H@("`@("`@("`@("`@
+M("`@("`@("`@("`@("!E;'-E>WT-"B`@("`@("`@("`@("`@("`@("`@("`@
+M('T-"B`@("`@("`@("`@("`@("`@("`@("`@(&5L<V5[#0H@("`@("`@("`@
+M("`@("`@("`@("`@("`@("!T:&ES3&EN92YS971/<&5R86YD061D<F5S<R@B
+M,#`P(BD[#0H@("`@("`@("`@("`@("`@("`@("`@("`@("!T:&ES3&EN92YU
+M;F1E9FEN9613>6UB;VP@/2!T<G5E.PT*("`@("`@("`@("`@("`@("`@("`@
+M("`@?0T*("`@("`@("`@("`@("`@("`@("`@?0T*("`@("`@("`@("`@("`@
+M("`@?0T*("`@("`@("`@("`@("`@("`@96QS97L-"B`@("`@("`@("`@("`@
+M("`@(`DO+R\O+R\O+R\O+R\O+R\O+R\O+R\-"B`@("`@("`@("`@("`@("`@
+M("`@('1H:7-,:6YE+G-E=$]P97)A;F1!9&1R97-S*"(B("L@-2D[#0H@("`@
+M("`@("`@("`@("`@("!]#0H@("`@("`@("`@("`@("`@("!I9BAT:&ES3&EN
+M92YG971-;F5M;VYI8R@I+F-O;7!A<F54;TEG;F]R94-A<V4H(D)!4T4B*2`A
+M/2`P('Q\('1H:7-,:6YE+F=E=$UN96UO;FEC*"DN8V]M<&%R951O26=N;W)E
+M0V%S92@B4E-50B(I("$],"`I('L-"B`@("`@("`@("`@("`@("`@(&EF("@A
+M=&AI<TQI;F4N9V5T36YE;6]N:6,H*2YE;F1S5VET:"@B4B(I*2![#0H@("`@
+M("`@("`@("`@("`@("`@("`@("!I9B`H=&AI<TQI;F4N9V5T3W!E<F%N9"@I
+M+F-O;G1A:6YS*"(C(BDI('L-"B`@("`@("`@("`@("`@("`@("`@("`@("`@
+M('1H:7-,:6YE+F%D9$DH*3L-"B`@("`@("`@("`@("`@("`@("`@("`@('T@
+M96QS92!I9B`H*'1H:7-,:6YE+F=E=$]P97)A;F0H*2YC;VYT86EN<R@B0"(I
+M*2D@>PT*("`@("`@("`@("`@("`@("`@("`@("`@("`@=&AI<TQI;F4N861D
+M3B@I.PT*("`@("`@("`@("`@("`@("`@("`@("`@?2!E;'-E('L-"B`@("`@
+M("`@("`@("`@("`@("`@("`@("`@('1H:7-,:6YE+F%D9$Y)*"D[#0H@("`@
+M("`@("`@("`@("`@("`@("`@("!]#0H@("`@("`@("`@("`@("`@("`@("!]
+M#0H@("`@("`@("`@("`@("`@("`@("!I9B`H*"AT:&ES3&EN92YG971-;F5M
+M;VYI8R@I+F-O;G1A:6YS*"(K(BDI*2D@>PT*("`@("`@("`@("`@("`@("`@
+M("`@("`@=&AI<TQI;F4N861D12@I.PT*("`@("`@("`@("`@("`@("`@("`@
+M?0T*("`@("`@("`@("`@("`@("`@?0T*("`@("`@("`@("`@("`@("`@;&EN
+M94]F3V)J96-T0V]D92LK.PT*("`@("`@("`@("`@("`@("`@;V)J96-T1FEL
+M92YA9&0H=&AI<TQI;F4N9V5T5&5X=$QI;F4H*2D[#0H@("`@("`@("`@("`@
+M("!]#0H@("`@("`@("`@("`@("!E;'-E(&EF*'1H:7-,:6YE+F=E=$UN96UO
+M;FEC*"DN8V]M<&%R951O26=N;W)E0V%S92@B0EE412(I(#T](#`@?'P@=&AI
+M<TQI;F4N9V5T36YE;6]N:6,H*2YC;VUP87)E5&])9VYO<F5#87-E*")73U)$
+M(BD@/3T@,"E[#0H@("`@("`@("`@("`@("`@("!I9BAT:&ES3&EN92YG971-
+M;F5M;VYI8R@I+F-O;7!A<F54;TEG;F]R94-A<V4H(D)95$4B*2`]/2`P*7L-
+M"B`@("`@("`@("`@("`@("`@("`@(%-T<FEN9R!C;VYS=&%N=$]B:F5C=$-O
+M9&4@/2`B(CL-"B`@("`@("`@("`@("`@("`@(`T*("`@("`@("`@("`@("`@
+M("`@("`@4W1R:6YG(&-O;G-T86YT(#T@=&AI<TQI;F4N9V5T3W!E<F%N9"@I
+M+G1R:6TH*3L-"B`@("`@("`@("`@("`@("`@("`@(&-H87(@8V]N<W1A;G14
+M>7!E(#T@8V]N<W1A;G0N8VAA<D%T*#`I.PT*("`@("`@("`@("`@("`@("`@
+M("`@:6YT(&-O;G-T86YT26YD97@@/2!C;VYS=&%N="YI;F1E>$]F*"(G(BD[
+M#0H@("`@("`@("`@("`@("`@("`@("!3=')I;F<@8V]N<W1A;G13=6)S=')I
+M;F<@/2!C;VYS=&%N="YS=6)S=')I;F<H8V]N<W1A;G1);F1E>"`K(#$L(&-O
+M;G-T86YT+FQE;F=T:"@I("T@,2D[#0H@("`@("`@("`@("`@("`@("`-"B`@
+M("`@("`@("`@("`@("`@("`@(&EF*&-O;G-T86YT5'EP92`]/2`G0R<@?'P@
+M8V]N<W1A;G14>7!E(#T]("=C)RE[#0H@("`@("`@("`@("`@("`@("`@("`@
+M("!C:&%R6UT@<W5B<W1R:6YG07)R87D@/2!C;VYS=&%N=%-U8G-T<FEN9RYT
+M;T-H87)!<G)A>2@I.PT*("`@("`@("`@("`@("`@("`@("`@"0T*("`@("`@
+M("`@("`@("`@("`@("`@("`@9F]R*&-H87(@=&AI<T-H87(Z('-U8G-T<FEN
+M9T%R<F%Y*0T*("`@("`@("`@("`@("`@("`@("`@("`@("`@8V]N<W1A;G1/
+M8FIE8W1#;V1E("L]("A);G1E9V5R+G1O2&5X4W1R:6YG*"@H:6YT*71H:7-#
+M:&%R*2DI.PT*("`@("`@("`@("`@("`@("`@("`@?0T*("`@("`@("`@("`@
+M("`@("`@("`@96QS92!I9BAC;VYS=&%N=%1Y<&4@/3T@)W@G('Q\(&-O;G-T
+M86YT5'EP92`]/2`G6"<I#0H@("`@("`@("`@("`@("`@("`@("`@("!C;VYS
+M=&%N=$]B:F5C=$-O9&4@/2!C;VYS=&%N=%-U8G-T<FEN9SL-"B`@("`@("`@
+M("`@("`@("`@(`D)#0H@("`@("`@("`@("`@("`@("`@("!T:&ES3&EN92YS
+M971/8FIE8W1#;V1E1F]R0GET92AC;VYS=&%N=$]B:F5C=$-O9&4I.PT*("`@
+M("`@("`@("`@("`@("`@?0T*("`@("`@("`@("`@("`@("`@96QS97L-"B`@
+M("`@("`@("`@("`@("`@("`@(&EN="!O8FIE8W1#;V1E(#T@*&EN="E,;VYG
+M+G!A<G-E3&]N9RAT:&ES3&EN92YG971/<&5R86YD*"DN=')I;2@I+#$V*3L-
+M"B`@("`@("`@("`@("`@("`@("`@(%-T<FEN9R!O;D=O(#T@26YT96=E<BYT
+M;TAE>%-T<FEN9RAO8FIE8W1#;V1E*3L-"B`@("`@("`@("`@("`@("`@("`@
+M(&EF*&]N1V\N;&5N9W1H*"D@/B`V*7L-"B`@("`@("`@("`@("`@("`@("`@
+M("`@(&]N1V\@/2!O;D=O+G-U8G-T<FEN9RAO;D=O+FQE;F=T:"@I+38L;VY'
+M;RYL96YG=&@H*2D[#0H@("`@("`@("`@("`@("`@("`@("!]#0H@("`@("`@
+M("`@("`@("`@("!T:&ES3&EN92YS971/8FIE8W1#;V1E1F]R5V]R9"AO;D=O
+M*3L-"B`@("`@("`@("`@("`@("`@('T-"B`@("`@("`@("`@("`@(`D-"B`@
+M("`@("`@("`@("`@("`@(&QI;F5/9D]B:F5C=$-O9&4K*SL-"B`@("`@("`@
+M("`@("`@("`@(&]B:F5C=$9I;&4N861D*'1H:7-,:6YE+F=E=%1E>'1,:6YE
+M*"DI.PT*("`@("`@("`@("`@("`@?0T*("`@("`@("`@("`@("`@96QS92!I
+M9BAT:&ES3&EN92YG971-;F5M;VYI8R@I+F-O;7!A<F54;TEG;F]R94-A<V4H
+M(DQ43U)'(BD@/3T@,"E[#0H@("`@("`@("`@("`@("`@("!T:&ES3&EN92YS
+M971#;VUM96YT0V]D92@I.PT*("`@("`@("`@("`@("`@?0T*("`@("`@("`@
+M("`@("`@96QS92!I9BAT:&ES3&EN92YG971-;F5M;VYI8R@I+F-O;7!A<F54
+M;TEG;F]R94-A<V4H(E)%4U<B*2`]/2`P*7L-"B`@("`@("`@("`@("`@("`@
+M(%-T<FEN9R!H97A,;V-A=&EO;B`]($EN=&5G97(N=&](97A3=')I;F<H;&]C
+M871I;VY,:7-T+G!E96LH*2D[#0H@("`@("`@("`@("`@("`-"B`@("`@("`@
+M("`@("`@("`@('=H:6QE*'1R=64I>PT*("`@("`@("`@("`@("`@("`@("`@
+M:68H:&5X3&]C871I;VXN;&5N9W1H*"D@(3T@-BD-"B`@("`@("`@("`@("`@
+M("`@("`@("`@(&EF*&AE>$QO8V%T:6]N+FQE;F=T:"@I(#P@-BD-"B`@("`@
+M("`@("`@("`@("`@("`@("`@("`@(&AE>$QO8V%T:6]N(#T@(C`B("L@:&5X
+M3&]C871I;VX[#0H@("`@("`@("`@("`@("`@("`@("`@("!E;'-E#0H@("`@
+M("`@("`@("`@("`@("`@("`@("`@("!B<F5A:SL-"B`@("`@("`@("`@("`@
+M("`@("`@(&5L<V4-"B`@("`@("`@("`@("`@("`@("`@("`@(&)R96%K.PT*
+M("`@("`@("`@("`@("`@("`@?0T*("`@("`@("`@("`@("`@#0H@("`@("`@
+M("`@("`@("`@("!O8FIE8W1&:6QE+F%D9"@B(2(I.PT*("`@("`@("`@("`@
+M("`@("`@;V)J96-T1FEL92YA9&0H:&5X3&]C871I;VXI.PT*("`@("`@("`@
+M("`@("`@("`@;V)J96-T1FEL92YA9&0H(C`P,#`P,"(I.PT*("`@("`@("`@
+M("`@("`@("`@;&]C871I;VY/9DQA<W1%>&5C=71I;VX@/2!L:6YE3V9/8FIE
+M8W1#;V1E("L@,3L-"B`@("`@("`@("`@("`@("`@(&QI;F5/9D]B:F5C=$-O
+M9&4@*ST@,SL-"B`@("`@("`@("`@("`@('T-"B`@("`@("`@("`@('UE;'-E
+M(&EF*'1H:7-,:6YE+F=E=$UN96UO;FEC*"DN8V]M<&%R951O26=N;W)E0V%S
+M92@B0D%312(I(#T](#`I>PT*("`@("`@("`@("`@("`@=&AI<TQI;F4N<V5T
+M0V]M;65N=$-O9&4H*3L-"B`@("`@("`@("`@('T@96QS97L-"B`@("`@("`@
+M("`@("`@('1H:7-,:6YE+G-E=$-O;6UE;G1#;V1E*"D[#0H@("`@("`@("`@
+M("!]#0H@("`@("`@("`)#0H@("`@("`@("`@("!P<FEN=%1O1FEL92AT:&ES
+M3&EN92P@;&EN94YU;6)E<BLK*3L-"B`@("`@("`@("`@('1H:7-,:6YE(#T@
+M;F5W($YE>'1,:6YE3V)J96-T*&EN<'5T+FYE>'1,:6YE*"DI.PT*("`@("`@
+M("`@("`@=&AI<TQI;F4N=6YD969I;F5D4WEM8F]L(#T@9F%L<V4[#0H@("`@
+M("`@("!]#0H@("`@("`)#0H@("`@("`@("!T:&ES3&EN92YS971%;F1#;V1E
+M*"D[#0H@("`@("`@("!T:&ES3&EN92YS971,;V-A=&EO;BA);G1E9V5R+G1O
+M2&5X4W1R:6YG*&QO8V%T:6]N3&ES="YP;VQL*"DI*3L-"B`@("`@("`@('!R
+M:6YT5&]&:6QE*'1H:7-,:6YE+"!L:6YE3G5M8F5R*3L-"B`@("`@(`D-"B`@
+M("`@("`@('!R:6YT3V)J96-T0V]D92@I.PT*("`@("`@"0T*("`@("`@("`@
+M<F5T=7)N(&%R9SL-"B`@("`@('T-"B`@(`D-"B`@("`@('!U8FQI8R!B;V]L
+M96%N(&AA<U-Y;6)O;"A3=')I;F<@;W!E<F%N9"E[#0H@("`@("`@("!C:&%R
+M6UT@;W!E<F%N9$%R<F%Y(#T@;W!E<F%N9"YT<FEM*"DN=&]#:&%R07)R87DH
+M*3L-"B`@("`@(`T*("`@("`@("`@9F]R*&-H87(@=&AI<T-H87(Z(&]P97)A
+M;F1!<G)A>2D-"B`@("`@("`@("`@(&EF*'1H:7-#:&%R(#X@-3<@)B8@=&AI
+M<T-H87(@/"`T."D-"B`@("`@("`@("`@("`@(')E='5R;B!F86QS93L-"B`@
+M("`@(`T*("`@("`@("`@<F5T=7)N('1R=64[#0H@("`@("!]#0H@("`)#0H@
+M("`@("!P=6)L:6,@=F]I9"!P<FEN=$]B:F5C=$-O9&4H*7L-"B`@("`@("`@
+M(&]B:F5C=$9I;&4N<V5T*&QO8V%T:6]N3V9,87-T17AE8W5T:6]N+"!S=&%R
+M=$%D9')E<W,I.PT*("`@("`@("`@4W1R:6YG6UT@;V)J96-T1FEL94%R<F%Y
+M(#T@;V)J96-T1FEL92YT;T%R<F%Y*&YE=R!3=')I;F=;,5TI.PT*("`@("`@
+M"0T*("`@("`@("`@9F]R*%-T<FEN9R!T:&ES4W1R:6YG26Y/8FIE8W1&:6QE
+M.B!O8FIE8W1&:6QE07)R87DI#0H@("`@("`@("`@("!O8FIE8W1#;V1E3W5T
+M<'5T+G!R:6YT;&XH=&AI<U-T<FEN9TEN3V)J96-T1FEL92D[#0H@("`@("`)
+M"0T*("`@("`@("`@;V)J96-T0V]D94]U='!U="YP<FEN=&QN*"(A(BD[#0H@
+M("`@("!]#0H@("`)#0H@("`@("!P=6)L:6,@4W1R:6YG('!A<W,R4W!L87-H
+M*%-T<FEN9R!A<F<I>PT*("`@("`@("`@4W1R:6YG(&YE=T9I;&5.86UE(#T@
+M8W)E871E3V)J96-T1FEL92AA<F<I.PT*("`@("`@#0H@("`@("`@("!T<GE[
+M#0H@("`@("`@("`@("!O8FIE8W1#;V1E3W5T<'5T(#T@;F5W(%!R:6YT5W)I
+M=&5R*&YE=R!&:6QE5W)I=&5R*&YE=T9I;&5.86UE*2P@=')U92D[#0H@("`@
+M("`@("!]#0H@("`@("`@("`@("!C871C:"A%>&-E<'1I;VX@92E[?0T*("`@
+M("`@("`@9FEN86QL>7L-"B`@("`@("`@("`@(')E='5R;B!N97=&:6QE3F%M
+M92YS=6)S=')I;F<H,"P@;F5W1FEL94YA;64N:6YD97A/9B@B+B(I*3L-"B`@
+M("`@("`@('T-"B`@("`@('T-"B`@(`D-"B`@("`@('!U8FQI8R!3=')I;F<@
+M8W)E871E3V)J96-T1FEL92A3=')I;F<@87)G*7L-"B`@("`@("`@(%-T<FEN
+M9R!N97=&:6QE3F%M92`]("(B.PT*("`@("`@#0H@("`@("`@("!T<GE[#0H@
+M("`@("`@("`@("!I9BAA<F<N:6YD97A/9B@B+B(I("$]("TQ*0T*("`@("`@
+M("`@("`@("`@;F5W($9I;&4H;F5W1FEL94YA;64@/2!A<F<N<W5B<W1R:6YG
+M*#`L(&%R9RYI;F1E>$]F*"(N(BDI("L@(BYO8FHB*2YC<F5A=&5.97=&:6QE
+M*"D[#0H@("`@("`@("`@("`)#0H@("`@("`@("`@("!E;'-E(`T*("`@("`@
+M("`@("`@("`@;F5W($9I;&4H;F5W1FEL94YA;64@/2!A<F<@*R`B+F]B:B(I
+M+F-R96%T94YE=T9I;&4H*3L@("`@(`T*("`@("`@("`@?0T*("`@("`@("`@
+M("`@8V%T8V@H17AC97!T:6]N(&4I>PT*("`@("`@("`@("`@("`@92YP<FEN
+M=%-T86-K5')A8V4H*3L-"B`@("`@("`@("`@("`@(%-Y<W1E;2YO=70N<')I
+M;G1L;B@B7&Y!;B!E<G)O<B!H87,@;V-C=7)R960N(%1H:7,@<')O9W)A;2!W
+M:6QL(&YO=R!E>&ET+B(I.PT*("`@("`@("`@("`@?0T*("`@("`@("`@9FEN
+M86QL>7L-"B`@("`@("`@("`@(')E='5R;B!N97=&:6QE3F%M93L-"B`@("`@
+4("`@('T-"B`@("`@('T-"B`@('UE
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 20 30 02 'Pass2.java'; eval "$shar_touch") &&
+  chmod 0644 'Pass2.java'
+if test $? -ne 0
+then ${echo} 'restore of Pass2.java failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'Pass2.java: MD5 check failed'
+       ) << \SHAR_EOF
+f1d0a784c7cb1f6ef1e73579c58ab190  Pass2.java
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'Pass2.java'` -ne 15095 && \
+  ${echo} 'restoration warning:  size of Pass2.java is not 15095'
+  fi
+fi
+# ============= ReadLabelTable.java ==============
+if test -f 'ReadLabelTable.java' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING ReadLabelTable.java (file already exists)'
+else
+${echo} 'x - extracting ReadLabelTable.java (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 ReadLabelTable.java
+M("`@("\O2&]N>6$@16QF87EO=6UY#0H@(`T*("`@:6UP;W)T(&IA=F$N:6\N
+M1FEL93L-"B`@(&EM<&]R="!J879A+G5T:6PN4V-A;FYE<CL-"B`@(&EM<&]R
+M="!J879A+FEO+D9I;&5.;W1&;W5N9$5X8V5P=&EO;CL-"@T*("`@<'5B;&EC
+M(&-L87-S(%)E861,86)E;%1A8FQE>PT*("`@("`@4TE#26YS=')U8W1I;VY(
+M87-H5&%B;&4@4TE#26YS=')U8W1I;VYS(#T@;F5W(%-)0TEN<W1R=6-T:6]N
+M2&%S:%1A8FQE*"D[#0H@("`-"B`@("`@('!U8FQI8R!296%D3&%B96Q486)L
+M92@I>PT*("`@("`@("`@=&AI<R@B4VEC3W!S+G1X="(I.PT*("`@("`@?0T*
+M("`@("`@<')I=F%T92!296%D3&%B96Q486)L92A3=')I;F<@87)G*7L-"B`@
+M("`@("`@('1R>7L-"B`@("`@("`@("`@($9I;&4@9FEL92`](&YE=R!&:6QE
+M*&%R9RD[#0H@("`@("`@("`@("!38V%N;F5R(&EN<'5T(#T@;F5W(%-C86YN
+M97(H9FEL92D[#0H@("`@("`@("`-"B`@("`@("`@("`@('=H:6QE*&EN<'5T
+M+FAA<TYE>'1,:6YE*"DI>PT*("`@("`@("`@("`@("`@<F5A9%-)0TEN<W1R
+M=6-T:6]N*&EN<'5T+FYE>'1,:6YE*"DI.PT*"0D)"7T-"B`@("`@("`@('T-
+M"B`@("`@("`@("`@(&-A=&-H*$9I;&5.;W1&;W5N9$5X8V5P=&EO;B!E*7L-
+M"B`@("`@("`@("`@("`@(%-Y<W1E;2YO=70N<')I;G1L;B@B5&AE(&9I;&4@
+M4VEC3W!S+F1A="!C;W5L9"!N;W0@8F4@9F]U;F0A(BD[#0H@("`@("`@("`@
+M("`@("!3>7-T96TN97AI="@M,BD[#0H@("`@("`@("`@("!]#0H@("`@("!]
+M#0H@("`-"B`@("`@('!R:79A=&4@=F]I9"!R96%D4TE#26YS=')U8W1I;VXH
+M4W1R:6YG(&EN<W1R=6-T:6]N3&EN92E[#0H@("`@("`@("!3=')I;F=;72!S
+M<&QI=%-T<FEN9R`](&EN<W1R=6-T:6]N3&EN92YS<&QI="@B("(L(#`I.PT*
+M("`@("`@("`@4W1R:6YG6UT@9&%T82`](&YE=R!3=')I;F=;-%T[#0H@("`@
+M("`@("!I;G0@:2`](#`[#0H@("`@("`)#0H@("`@("`@("!F;W(H4W1R:6YG
+M(&UY4W1R:6YG.B!S<&QI=%-T<FEN9RD-"B`@("`@("`@("`@(&EF*&UY4W1R
+M:6YG+F-O;7!A<F54;R@B(BD@(3T@,"D-"B`@("`@("`@("`@("`@(&1A=&%;
+M:2LK72`](&UY4W1R:6YG.PT*("`@("`@"0D)#0H@("`@("`@("!I9BAD871A
+M+FQE;F=T:"`]/2`R*7L-"B`@("`@("`@("`@("\O4TE#15%5+FEN<V5R="AN
+M97<@4TE#15%5*&1A=&%;,%TL(&1A=&%;,5TI*3L-"B`@("`@("`@('T-"B`@
+M("`@("`@(&5L<V5[#0H@("`@("`@("`@("!324-);G-T<G5C=&EO;G,N:6YS
+M97)T*&YE=R!324-);G-T<G5C=&EO;BAD871A6S!=+"!D871A6S%=+"!D871A
+D6S)=+"!D871A6S-=*2D[#0H)"0E]("`@(`T*"0E]#0H@("!]
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 20 30 01 'ReadLabelTable.java'; eval "$shar_touch") &&
+  chmod 0644 'ReadLabelTable.java'
+if test $? -ne 0
+then ${echo} 'restore of ReadLabelTable.java failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'ReadLabelTable.java: MD5 check failed'
+       ) << \SHAR_EOF
+adb76aa2395a1ed36e2a3f58ed6985ca  ReadLabelTable.java
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'ReadLabelTable.java'` -ne 1341 && \
+  ${echo} 'restoration warning:  size of ReadLabelTable.java is not 1341'
+  fi
+fi
+# ============= README.md ==============
+if test -f 'README.md' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING README.md (file already exists)'
+else
+${echo} 'x - extracting README.md (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 README.md
+M(R!!<W-E;6)L97(*"E!A<W,@5'=O"@I4:&4@<'5R<&]S92!O9B!T:&ES('!R
+M;VIE8W0@:7,@8W)E871I;F<@861D<F5S<R!L:6YE<R!A<R!W96QL(&%S(&]B
+M:F5C="!C;V1E('1O('=R:71E('1H96T@:6YT;R!A("YL<W0@86YD("YO8FH@
+M9FEL92X@5&AI<R!I<R!087-S(#$@86YD(%!A<W,@,B!O9B!A(%-)0R]812!A
+M<W-E;6)L97(N"@H@($%S<V5M8FQE<DUA:6XN:F%V82!F:6QE.B!4:&ES(&9I
+M;&4@8V]N=&%I;G,@=&AE('!R;V=R86T@86YD('1H92!I;7!L96UE;G1A=&EO
+M;B!O9B!T:&4@<')O9W)A;2X@5&AI<R!F:6QE('=I;&P*("!R96%D('1H92!I
+M;G!U="!F:6QE(&9R;VT@=&AE(&-O;6UA;F0@;&EN92X*("!'96YE<FEC2&%S
+M:&EN9U1A8FQE+FIA=F$@9FEL93H@5&AI<R!I<R!T:&4@8F%S92!F;W(@86QL
+M('1H92!H87-H960@=&%B;&5S+@H@($AA<VAA8FQE3V)J96-T+FIA=F$@9FEL
+M93H@5&AI<R!F:6QE(&-O;G1A:6YS('1H92!T>7!E<R!O9B!O8FIE8W1S(&%C
+M8V5P=&5D(&)Y('1H92!T86)L97,N"B`@"@H@($EN<'5T+G1X="!F:6QE.B!4
+M:&4@:6YP=70@9FEL92!I<R!D971E<FUI;F5D(&)Y('1H92!U<V5R(&EN('1H
+M92!C;VUM86YD(&QI;F4N(%1H92!!<W-E;6)L97)-86EN+FIA=F$@9FEL92!W
+M:6QL(')E860@=&AE(&9I;&4N(%1H92!I;G!U="!F:6QE('-H;W5L9"!A9&AE
+M<F4@=&AE(&9O;&QO=VEN9R!F;W)M870Z"@H@("`@($-O;"`Q+3@@("`@3&%B
+M96P@*&]P=&EO;F%L*0H@("`@($-O;"`Y("`@("`@0FQA;FL*("`@("!#;VP@
+M,3`@("`@("L@;W(@*B`H;W!T:6]N86PI"B`@("`@0V]L(#$Q+3$W("!-;F5M
+M;VYI8PH@("`@($-O;"`Q."`@("`@0FQA;FL*("`@("!#;VP@,3D@("`@(",L
+M($`L(#T@*&]P=&EO;F%L*0H@("`@($-O;"`R,"TR.2`@3W!E<F%N9`H@("`@
+M($-O;"`S,"TS,2`@0FQA;FL*("`@("!#;VP@,S(M.#`@($-O;6UE;G1S("AO
+M<'1I;VYA;"D*("`*("!/=71P=70@9FEL97,Z("HN;V)J(&%N9"`J+FQS="X@
+M"B`@5&AE('!R;V=R86T@=VEL;"!P<FEN="!T:&4@=&5X="!F:6QE('=I=&@@
+M8V]M<'5T97(@861D<F5S<V5S(&%N9"!O8FIE8W0@8V]D92!F;W(@96%C:"!I
+M;G-T<G5C=&EO;BX*"B`@36%K969I;&4@9FEL93H@5&AE(&UA:V5F:6QE(&-O
+M;7!I;&5S('1H92!!<W-E;6)L97)-86EN(&9I;&4@86YD(&%L<V\@<G5N<R!T
+C:&4@;W1H97(@9FEL92!A<R!A;B!I;G!U="X*("`*("`*"B!L
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 19 47 25 'README.md'; eval "$shar_touch") &&
+  chmod 0644 'README.md'
+if test $? -ne 0
+then ${echo} 'restore of README.md failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'README.md: MD5 check failed'
+       ) << \SHAR_EOF
+410ca1b72124e04ef477304ecb0b113d  README.md
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'README.md'` -ne 1205 && \
+  ${echo} 'restoration warning:  size of README.md is not 1205'
+  fi
+fi
+# ============= SICEQU.java ==============
+if test -f 'SICEQU.java' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING SICEQU.java (file already exists)'
+else
+${echo} 'x - extracting SICEQU.java (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 SICEQU.java
+M("`O+TAO;GEA($5L9F%Y;W5M>0T*#0H@("!P=6)L:6,@8VQA<W,@4TE#15%5
+M(&5X=&5N9',@2&%S:&%B;&5/8FIE8W1[#0H@("`@("!P<FEV871E(%-T<FEN
+M9R!%455,86)E;#L-"B`@("`@('!R:79A=&4@4W1R:6YG($5155-T<FEN9U9A
+M;'5E.PT*("`@("`@<')I=F%T92!I;G0@15%526YT96=E<E9A;'5E.PT*("`@
+M"0T*("`@("`@<'5B;&EC(%-)0T5152A3=')I;F<@15%53&%B96PL(%-T<FEN
+M9R!%4553=')I;F=686QU92E[#0H@("`@("`@("!S971(87-H86)L95-T<FEN
+M9RA%455,86)E;"D[#0H@("`@("`@("!T:&ES+D5154QA8F5L(#T@15%53&%B
+M96P[#0H@("`@("`@("!T:&ES+D5155-T<FEN9U9A;'5E(#T@15%54W1R:6YG
+M5F%L=64[#0H@("`@("!]#0H@("`)#0H@("`@("!P=6)L:6,@4TE#15%5*%-T
+M<FEN9R!%455,86)E;"P@:6YT($51559A;'5E*7L-"B`@("`@("`@('-E=$AA
+M<VAA8FQE4W1R:6YG*$5154QA8F5L*3L-"B`@("`@("`@('1H:7,N15%53&%B
+M96P@/2!%455,86)E;#L-"B`@("`@("`@('1H:7,N15%526YT96=E<E9A;'5E
+M(#T@15%526YT96=E<E9A;'5E.PT*("`@("`@?0T*("`@"0T*("`@("`@<'5B
+M;&EC(%-T<FEN9R!T;U-T<FEN9R@I>PT*("`@("`@("`@<F5T=7)N($5154QA
+M8F5L.PT*("`@("`@?0T*("`@"0T*("`@("`@<'5B;&EC(%-T<FEN9R!G971%
+M455,86)E;"@I>PT*("`@("`@("`@<F5T=7)N($5154QA8F5L.PT*("`@("`@
+M?0T*("`@"0T*("`@("`@<'5B;&EC(%-T<FEN9R!G971%4553=')I;F=686QU
+M92@I>PT*("`@("`@("`@<F5T=7)N($5155-T<FEN9U9A;'5E.PT*("`@("`@
+M?0T*("`@"0T*("`@("`@<'5B;&EC(&EN="!G971%455);G1E9V5R5F%L=64H
+M*7L-"B`@("`@("`@(')E='5R;B!%455);G1E9V5R5F%L=64[#0H@("`@("!]
+(#0H@("!]#0H@
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 20 30 01 'SICEQU.java'; eval "$shar_touch") &&
+  chmod 0644 'SICEQU.java'
+if test $? -ne 0
+then ${echo} 'restore of SICEQU.java failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'SICEQU.java: MD5 check failed'
+       ) << \SHAR_EOF
+75b8ed6bddfd4b076adf6818a4da78f4  SICEQU.java
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'SICEQU.java'` -ne 908 && \
+  ${echo} 'restoration warning:  size of SICEQU.java is not 908'
+  fi
+fi
+# ============= SICEQUTable.java ==============
+if test -f 'SICEQUTable.java' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING SICEQUTable.java (file already exists)'
+else
+${echo} 'x - extracting SICEQUTable.java (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 SICEQUTable.java
+M("`O+TAO;GEA($5L9F%Y;W5M>0T*("`-"B`@(&-L87-S(%-)0T51551A8FQE
+C(&5X=&5N9',@1V5N97)I8TAA<VAI;F=486)L97L-"B`@('U)
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 20 30 01 'SICEQUTable.java'; eval "$shar_touch") &&
+  chmod 0644 'SICEQUTable.java'
+if test $? -ne 0
+then ${echo} 'restore of SICEQUTable.java failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'SICEQUTable.java: MD5 check failed'
+       ) << \SHAR_EOF
+8ff2f30323558db9cfa713a75d8bb70c  SICEQUTable.java
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'SICEQUTable.java'` -ne 80 && \
+  ${echo} 'restoration warning:  size of SICEQUTable.java is not 80'
+  fi
+fi
+# ============= SICInstructionHashTable.java ==============
+if test -f 'SICInstructionHashTable.java' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING SICInstructionHashTable.java (file already exists)'
+else
+${echo} 'x - extracting SICInstructionHashTable.java (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 SICInstructionHashTable.java
+M("`O+TAO;GEA($5L9F%Y;W5M>0T*#0IP=6)L:6,@8VQA<W,@4TE#26YS=')U
+M8W1I;VY(87-H5&%B;&4@97AT96YD<R!'96YE<FEC2&%S:&EN9U1A8FQE>PT*
+M"7!U8FQI8R!324-);G-T<G5C=&EO;DAA<VA486)L92@I>PT*"0ET:&ES*#(R
+M-RD[#0H)?0T*#0H)<')I=F%T92!324-);G-T<G5C=&EO;DAA<VA486)L92AI
+J;G0@87)R87E3:7IE*7L-"@D)<W5P97(H87)R87E3:7IE*3L-"@E]#0I]
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 20 30 02 'SICInstructionHashTable.java'; eval "$shar_touch") &&
+  chmod 0644 'SICInstructionHashTable.java'
+if test $? -ne 0
+then ${echo} 'restore of SICInstructionHashTable.java failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'SICInstructionHashTable.java: MD5 check failed'
+       ) << \SHAR_EOF
+d74ce3df16dcee64957f57d90e3fe84e  SICInstructionHashTable.java
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'SICInstructionHashTable.java'` -ne 222 && \
+  ${echo} 'restoration warning:  size of SICInstructionHashTable.java is not 222'
+  fi
+fi
+# ============= SICInstruction.java ==============
+if test -f 'SICInstruction.java' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING SICInstruction.java (file already exists)'
+else
+${echo} 'x - extracting SICInstruction.java (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 SICInstruction.java
+M("`O+TAO;GEA($5L9F%Y;W5M>0T*#0IP=6)L:6,@8VQA<W,@4TE#26YS=')U
+M8W1I;VX@97AT96YD<R!(87-H86)L94]B:F5C='L-"@EP<FEV871E(%-T<FEN
+M9R!M;F5M;VYI8R`]("(B+"!/4$-O9&4@/2`B(BP@;6ES8V5L;&%N96]U<R`]
+M("(B.PT*"7!R:79A=&4@:6YT(&EN=$)Y=&53:7IE(#T@,#L-"@T*"7!U8FQI
+M8R!324-);G-T<G5C=&EO;BA3=')I;F<@;6YE;6]N:6,L(%-T<FEN9R!/4$-O
+M9&4L(%-T<FEN9R!B>71E4VEZ92P@4W1R:6YG(&UI<V-E;&QA;F5O=7,I>PT*
+M"0ET:&ES+FUN96UO;FEC(#T@;6YE;6]N:6,[#0H)"71H:7,N3U!#;V1E(#T@
+M3U!#;V1E.PT*"0ET:&ES+FUI<V-E;&QA;F5O=7,@/2!M:7-C96QL86YE;W5S
+M.PT*"0D-"@D)=')Y>PT*"0D):6YT0GET95-I>F4@/2!);G1E9V5R+G!A<G-E
+M26YT*&)Y=&53:7IE*3L-"@D)?0T*"0EC871C:"A.=6UB97)&;W)M871%>&-E
+M<'1I;VX@92E[?0T*"0EF:6YA;&QY>PT*"0D)<V5T2&%S:&%B;&53=')I;F<H
+M;6YE;6]N:6,I.PT*"0E]#0H)?0T*"0T*"7!U8FQI8R!3=')I;F<@9V5T36YE
+M;6]N:6,H*7L-"@D)<F5T=7)N(&UN96UO;FEC.PT*"7T-"@D-"@EP=6)L:6,@
+M4W1R:6YG(&=E=$]00V]D92@I>PT*"0ER971U<FX@3U!#;V1E.PT*"7T-"@D-
+M"@EP=6)L:6,@:6YT(&=E=$)Y=&53:7IE*"E[#0H)"7)E='5R;B!I;G1">71E
+M4VEZ93L-"@E]#0H)#0H)<'5B;&EC(%-T<FEN9R!G971-:7-C96QL86YE;W5S
+M*"E[#0H)"7)E='5R;B!M:7-C96QL86YE;W5S.PT*"7T-"@D-"@EP=6)L:6,@
+M4W1R:6YG('1O4W1R:6YG*"E[#0H)"7)E='5R;B!M;F5M;VYI8R`K("(@(B`K
+C($]00V]D92`K("(@(B`K(&EN=$)Y=&53:7IE.PT*"7T-"GUI
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 20 30 01 'SICInstruction.java'; eval "$shar_touch") &&
+  chmod 0644 'SICInstruction.java'
+if test $? -ne 0
+then ${echo} 'restore of SICInstruction.java failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'SICInstruction.java: MD5 check failed'
+       ) << \SHAR_EOF
+8ba536ae65b02a410ae8287fa477668b  SICInstruction.java
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'SICInstruction.java'` -ne 845 && \
+  ${echo} 'restoration warning:  size of SICInstruction.java is not 845'
+  fi
+fi
+# ============= SICLabelObjectTable.java ==============
+if test -f 'SICLabelObjectTable.java' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING SICLabelObjectTable.java (file already exists)'
+else
+${echo} 'x - extracting SICLabelObjectTable.java (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 SICLabelObjectTable.java
+M("`O+TAO;GEA($5L9F%Y;W5M>0T*#0H@("!P=6)L:6,@8VQA<W,@4TE#3&%B
+M96Q/8FIE8W1486)L92!E>'1E;F1S($=E;F5R:6-(87-H:6YG5&%B;&5[#0H)
+M#0H)"7!U8FQI8R!324-,86)E;$]B:F5C=%1A8FQE*&EN="!S:7IE*7L-"@D)
+;"7-U<&5R*'-I>F4I.PT*"0E]#0H)#0H@("!]
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 20 30 01 'SICLabelObjectTable.java'; eval "$shar_touch") &&
+  chmod 0644 'SICLabelObjectTable.java'
+if test $? -ne 0
+then ${echo} 'restore of SICLabelObjectTable.java failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'SICLabelObjectTable.java: MD5 check failed'
+       ) << \SHAR_EOF
+c568c3cb6b94234a6837ab9c92c5d277  SICLabelObjectTable.java
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'SICLabelObjectTable.java'` -ne 162 && \
+  ${echo} 'restoration warning:  size of SICLabelObjectTable.java is not 162'
+  fi
+fi
+# ============= SICOperationsTable.java ==============
+if test -f 'SICOperationsTable.java' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING SICOperationsTable.java (file already exists)'
+else
+${echo} 'x - extracting SICOperationsTable.java (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 SICOperationsTable.java
+M("`@("`O+TAO;GEA($5L9F%Y;W5M>0T*#0H@("!C;&%S<R!324-/<&5R871I
+M;VYS5&%B;&4@97AT96YD<R!'96YE<FEC2&%S:&EN9U1A8FQE>PT*("`@("`@
+M<')I=F%T92!J879A+G5T:6PN4V-A;FYE<B!I;G!U=#L-"B`@("`@('!R:79A
+M=&4@:F%V82YI;RY&:6QE(&9I;&4[#0H@("`)#0H@("`@("!P<FEV871E($=E
+M;F5R:6-(87-H:6YG5&%B;&4@4TE#15%5.PT*("`@"0T*("`@("`@<'5B;&EC
+M(%-)0T]P97)A=&EO;G-486)L92@I>PT*("`@("`@("`@=&AI<R@B4VEC3W!S
+M+G1X="(I.PT*("`@("`@?0T*("`@#0H@("`@("!P=6)L:6,@4TE#3W!E<F%T
+M:6]N<U1A8FQE*%-T<FEN9R!F:6QE3&]C871I;VXI>PT*("`@("`@("`@<W5P
+M97(H,3DW*3L-"B`@("`@("`@(%-)0T5152`](&YE=R!324-%455486)L92@I
+M.PT*("`@("`@"0T*("`@("`@("`@=')Y>PT*("`@("`@("`@("`@9FEL92`]
+M(&YE=R!J879A+FEO+D9I;&4H9FEL94QO8V%T:6]N*3L)"0DO+R!#<F5A=&4@
+M1FEL92!O8FIE8W0@9G)O;2!S=7!P;&EE9"!F:6QE(&1I<F5C=&]R>0T*("`@
+M("`@("`@("`@:6YP=70@/2!N97<@:F%V82YU=&EL+E-C86YN97(H9FEL92D[
+M"0DO+R!#<F5A=&4@4V-A;FYE<B!O8FIE8W0@9G)O;2!&:6QE(&]B:F5C=`T*
+M("`@("`@("`@"0T*("`@("`@("`@("`@=VAI;&4H:6YP=70N:&%S3F5X=$QI
+M;F4H*2E[#0H@("`@("`@("`@("`@("!R96%D3&EN92AI;G!U="YN97AT3&EN
+M92@I*3L-"B`@("`@("`@("`@('T@("`@("`-"B`@("`@("`@('T-"B`@("`@
+M("`@(`T*("`@("`@("`@("`@8V%T8V@H:F%V82YI;RY&:6QE3F]T1F]U;F1%
+M>&-E<'1I;VX@92E[#0H@("`@("`@("`@("`@("!E+G!R:6YT4W1A8VM4<F%C
+M92@I.PT*("`@("`@("`@("`@("`@4WES=&5M+F]U="YP<FEN=&QN*")<;D%N
+M(&5R<F]R(&AA<R!O8V-U<G)E9"X@5&AI<R!P<F]G<F%M('=I;&P@;F]W(&5X
+M:70N(BD[#0H@("`@("`@("`@("!]#0H@("`@("`@("`)#0H@("`@("`@("!F
+M:6YA;&QY>PT*("`@("`@("`@("`@:6YP=70N8VQO<V4H*3L-"B`@("`@("`@
+M('T-"B`@("`@('T-"B`@(`D-"B`@("`@('!U8FQI8R!V;VED(')E861,:6YE
+M*%-T<FEN9R!S=')I;F<I>PT*"0D)4W1R:6YG6UT@<W!L:713=')I;F<@/2!S
+M=')I;F<N<W!L:70H(B`B+"`P*3L-"@D)"5-T<FEN9UM=(&1A=&$@/2!N97<@
+M4W1R:6YG6S1=.PT*"0D)#0H)"0EI;G0@:2`](#`[#0H)"0D-"@D)"69O<BA3
+M=')I;F<@;7E3=')I;F<Z('-P;&ET4W1R:6YG*0T*"0D)"6EF*&UY4W1R:6YG
+M+F-O;7!A<F54;R@B(BD@(3T@,"D-"@D)"0D)9&%T85MI*RM=(#T@;7E3=')I
+M;F<[#0H)"0D-"B`@("`@("`@(&EF*&1A=&$N;&5N9W1H(#T](#(I>PT*("`@
+M("`@("`@("`@4TE#15%5+FEN<V5R="AN97<@4TE#15%5*&1A=&%;,%TL(&1A
+M=&%;,5TI*3L-"B`@("`@("`@('T-"B`@("`@("`@(&5L<V4-"B`@("`@("`@
+M("`@(&EN<V5R="AN97<@4TE#26YS=')U8W1I;VXH9&%T85LP72P@9&%T85LQ
+M72P@9&%T85LR72P@9&%T85LS72DI.PT*("`@("`@?0T*("`@"0T*("`@("`@
+M<'5B;&EC(%-)0T51551A8FQE(&=E=$51551A8FQE*"E[#0H@("`@("`@("!R
+I971U<FX@*%-)0T51551A8FQE*5-)0T5153L-"B`@("`@('T-"B`@('T@
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 20 30 01 'SICOperationsTable.java'; eval "$shar_touch") &&
+  chmod 0644 'SICOperationsTable.java'
+if test $? -ne 0
+then ${echo} 'restore of SICOperationsTable.java failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'SICOperationsTable.java: MD5 check failed'
+       ) << \SHAR_EOF
+0c732ee15f17009378d01e3ca2b2c425  SICOperationsTable.java
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'SICOperationsTable.java'` -ne 1616 && \
+  ${echo} 'restoration warning:  size of SICOperationsTable.java is not 1616'
+  fi
+fi
+# ============= SicOps.txt ==============
+if test -f 'SicOps.txt' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING SicOps.txt (file already exists)'
+else
+${echo} 'x - extracting SicOps.txt (binary)'
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 SicOps.txt
+M*TQ$0B`@("`V."`@("`T"DU53%(@("`@.3@@("`@,@HK4U-+("`@($5#("`@
+M(#0*5T0@("`@("!$0R`@("`S"BI35%@@("`@,3`@("`@,PHJ3U(@("`@(#0T
+M("`@(#,*04Y$("`@("`T,"`@("`S"BI,1$$@("`@,#`@("`@,PHK2D=4("`@
+M(#,T("`@(#0**U-43"`@("`Q-"`@("`T"BI71"`@("`@1$,@("`@,PHK4U1)
+M("`@($0T("`@(#0*3%!3("`@("!$,"`@("`S"BM,1%0@("`@-S0@("`@-`HJ
+M3$1#2"`@(#4P("`@(#,**DQ$3"`@("`P."`@("`S"E1)6%(@("`@0C@@("`@
+M,@I354)&("`@(#5#("`@(#,**DI354(@("`T."`@("`S"DQ$6"`@("`@,#0@
+M("`@,PHK355,1B`@(#8P("`@(#0**TH@("`@("`S0R`@("`T"E-60R`@("`@
+M0C`@("`@,@I35%0@("`@(#@T("`@(#,**T-/35`@("`R."`@("`T"E1)6"`@
+M("`@,D,@("`@,PI&3$]!5"`@($,P("`@(#$*3$14("`@("`W-"`@("`S"E-4
+M02`@("`@,$,@("`@,PHJ5$0@("`@($4P("`@(#,*4TA)1E12("!!."`@("`R
+M"E-40B`@("`@-S@@("`@,PI324\@("`@($8P("`@(#$*3$1!("`@("`P,"`@
+M("`S"DA)3R`@("`@1C0@("`@,0HK4U13("`@(#=#("`@(#0*1$E61B`@("`V
+M-"`@("`S"BI425@@("`@,D,@("`@,PHK2E-50B`@(#0X("`@(#0*3$1#2"`@
+M("`U,"`@("`S"BM#3TU01B`@.#@@("`@-`I*15$@("`@(#,P("`@(#,**D1)
+M5B`@("`R-"`@("`S"BM35%0@("`@.#0@("`@-`HK4U5"1B`@(#5#("`@(#0*
+M*D%.1"`@("`T,"`@("`S"BM/4B`@("`@-#0@("`@-`I34TL@("`@($5#("`@
+M(#,**TI,5"`@("`S."`@("`T"BI21"`@("`@1#@@("`@,PI,1%,@("`@(#9#
+M("`@(#,**DU53"`@("`R,"`@("`S"BM,1%,@("`@-D,@("`@-`HK1$E6("`@
+M(#(T("`@(#0@("`*2B`@("`@("`S0R`@("`S"BM-54P@("`@,C`@("`@-`HJ
+M0T]-4"`@(#(X("`@(#,**U-46"`@("`Q,"`@("`T"BI*("`@("`@,T,@("`@
+M,PHK3$1!("`@(#`P("`@(#0**U-50B`@("`Q0R`@("`T"BM35$(@("`@-S@@
+M("`@-`HJ2DQ4("`@(#,X("`@(#,*4U5"("`@("`Q0R`@("`S"BM!1$1&("`@
+M-3@@("`@-`I21"`@("`@($0X("`@(#,**DI%42`@("`S,"`@("`S"DQ$0B`@
+M("`@-C@@("`@,PI24U5"("`@(#1#("`@(#,*355,1B`@("`V,"`@("`S"DI3
+M54(@("`@-#@@("`@,PI354)2("`@(#DT("`@(#(*1$E64B`@("`Y0R`@("`R
+M"DQ$3"`@("`@,#@@("`@,PHK2D51("`@(#,P("`@(#0**U-40T@@("`U-"`@
+M("`T"BI35$P@("`@,30@("`@,PHK4U1!("`@(#!#("`@(#0*4U135R`@("!%
+M."`@("`S"D-/35!&("`@.#@@("`@,PHK1$E61B`@(#8T("`@(#0**U-41B`@
+M("`X,"`@("`T"E1)3R`@("`@1C@@("`@,0HJ041$("`@(#$X("`@(#,**E-4
+M4U<@("!%."`@("`S"BM35%-7("`@13@@("`@-`HK3%!3("`@($0P("`@(#0*
+M2DQ4("`@("`S."`@("`S"BI*1U0@("`@,S0@("`@,PI-54P@("`@(#(P("`@
+M(#,**TQ$3"`@("`P."`@("`T"D]2("`@("`@-#0@("`@,PI#3TU0("`@(#(X
+M("`@(#,*5$0@("`@("!%,"`@("`S"E-44R`@("`@-T,@("`@,PHJ4U1#2"`@
+M(#4T("`@(#,*3$1&("`@("`W,"`@("`S"D%$1"`@("`@,3@@("`@,PI&25@@
+M("`@($,T("`@(#$**E)354(@("`T0R`@("`S"DY/4DT@("`@0S@@("`@,0I3
+M5$8@("`@(#@P("`@(#,**DQ$6"`@("`P-"`@("`S"D-,14%2("`@0C0@("`@
+M,@HK4E-50B`@(#1#("`@(#0*041$1B`@("`U."`@("`S"BM71"`@("`@1$,@
+M("`@-`HK3$1#2"`@(#4P("`@(#0**TQ$1B`@("`W,"`@("`T"BM,1%@@("`@
+M,#0@("`@-`I35$-(("`@(#4T("`@(#,**T%$1"`@("`Q."`@("`T"BM!3D0@
+M("`@-#`@("`@-`HJ4U5"("`@(#%#("`@(#,*4U18("`@("`Q,"`@("`S"E)-
+M3R`@("`@04,@("`@,@I#3TU04B`@($$P("`@(#(*4TA)1E1,("!!-"`@("`R
+M"E-43"`@("`@,30@("`@,PHK5$0@("`@($4P("`@(#0*041$4B`@("`Y,"`@
+M("`R"E-422`@("`@1#0@("`@,PHK5$E8("`@(#)#("`@(#0**E-402`@("`P
+M0R`@("`S"DI'5"`@("`@,S0@("`@,PI$258@("`@(#(T("`@(#,**U)$("`@
+M("!$."`@("`T"D$@,`I8(#$*3"`R"E!#(#@*4U<@.0I"(#,*4R`T"E0@-0I&
+"(#9$
+`
+end
+SHAR_EOF
+  (set 20 18 12 07 20 30 01 'SicOps.txt'; eval "$shar_touch") &&
+  chmod 0644 'SicOps.txt'
+if test $? -ne 0
+then ${echo} 'restore of SicOps.txt failed'
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'SicOps.txt: MD5 check failed'
+       ) << \SHAR_EOF
+a21a5dfdd19f80522a26c457a9c1e330  SicOps.txt
+SHAR_EOF
+  else
+test `LC_ALL=C wc -c < 'SicOps.txt'` -ne 2072 && \
+  ${echo} 'restoration warning:  size of SicOps.txt is not 2072'
+  fi
+fi
+if rm -fr ${lock_dir}
+then ${echo} 'x - removed lock directory `'${lock_dir}\''.'
+else ${echo} 'x - failed to remove lock directory `'${lock_dir}\''.'
+  exit 1
+fi
+exit 0

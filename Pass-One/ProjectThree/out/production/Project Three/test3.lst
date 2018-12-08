@@ -1,0 +1,45 @@
+ASSEMBLER REPORT
+----------------
+     Loc   Object Code       Source Code
+     ----   -----------       -----------
+001- 00100                   FINDMAX	START	100	.INST TO ASSEM INDICATE START ADDR
+002-                         .the 100 is in hex, not base 10
+003- 00100                   	LDA	DAT	.A <- (M..M+2) ACC RECEIVED VAL AT DAT
+004- 00103                   	STA	BIG	.M..M+2 <- (A) BIG REC VAL IN ACC
+005-                         .the first data is the largest
+006- 00106                   	LDTF	NUM	.T <- NUMBER OF NUMBERS
+007- 00106                   	LDX	#3	.X <- 3
+008- 00109                   UP	LDA	DAT,X	.A <- NUM AT DAT + (X)
+009- 0010C                   	COMP	BIG	.CC <- IF (BIG) VERSUS (A)
+010- 0010F                   	JLT	DN	.IF CC IS LT JUMP TO ADDR AT DN
+011- 00112                   	STA	BIG	.(A) IS BIGGER THAN (BIG) BIG <- (A)
+012- 00115                   DN	LDS	#3	.S <- 3
+013- 00118                   	ADDR	S,X	.X <- (X) + (S) X=X+3
+014- 0011A                   	RMO	X,A	.A <- (X)
+015- 0011C                   	COMP	NUM	.CC (A) WITH (NUM) TO SEE IF DONE
+016- 0011F                   	JLTF	UP	.PC IS CHANGED TO ADDRESS OF UP
+017- 0011F                   	RSUB	DONE	
+018- 00122                   BIG	RESW	1
+019- 00125                   NUM	WORD	42
+020- 00128                   DAT	WORD	14
+021- 0012B                   	WORD	22
+022- 0012E                   	WORD	42
+023- 00131                   	WORD	86
+024- 00134                   	WORD	8
+025- 00137                   	WORD	64
+026- 0013A                   	WORD	90
+027- 0013D                   	WORD	41
+028- 00140                   	WORD	146
+029- 00143                   	WORD	12
+030- 00146                   	WORD	2965
+031- 00149                   	WORD	4096
+032- 0014C                   	WORD	512
+033- 0014F                   	WORD	111
+034- 00152                   	WORD	121
+035- 00155                   	END
+
+
+Table  Location   Label  Address   Use   Csect
+-----  --------   -----  -------   ---   -----
+18			DAT 00128
+25			BIG 00122

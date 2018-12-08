@@ -1,0 +1,41 @@
+ASSEMBLER REPORT
+----------------
+     Loc   Object Code       Source Code
+     ----   -----------       -----------
+001- 00100                   	START	100
+002- 00100                   	LDA	LBL
+003- 00103                   UP	LDA	#45
+004- 00106                   TEST	LDA	@LBL
+005- 00109                   	+LDA	LBL	.COMMENT (NEEDS TO START WITH A PERIOD)
+006- 0010D                   PPPP	TUFUE	LBL
+Invalid Operational Code Given.
+007- 0010D                   	LDA	LBL,X
+008- 00110                   UP	LDA	#LBL
+ERROR UP already exists at location 59
+009- 00110                   BEG	LDA	#NLB
+010- 00113                   	SUB	#BEG
+011- 00116                   	RSUB
+012- 00119                   LBL	WORD	50
+013- 0011C                   BEG	RESW	100
+ERROR BEG already exists at location 18
+014- 0011C                   NLB	RESW	100
+015- 00248                   TEST	RESB	1
+ERROR TEST already exists at location 42
+016- 00248                   TEST2	RESB	75
+017- 00293                   	WORD	5
+Erorr Undefined Label 293
+018- 00296                   	BYTE	1
+Erorr Undefined Label 296
+019- 00296                   	WORD	1
+Erorr Undefined Label 296
+020- 00299                   	END
+
+
+Table  Location   Label  Address   Use   Csect
+-----  --------   -----  -------   ---   -----
+18			BEG 00110
+42			TEST 00106
+45			PPPP 0010D
+59			UP 00103
+62			NLB 0011C
+75			TEST2 00248

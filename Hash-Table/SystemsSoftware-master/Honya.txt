@@ -1,0 +1,54 @@
+stored moss 25 at location 0
+
+ERROR eno not found
+
+ERROR fred not found
+
+ERROR gorge not found
+
+stored gorge 18 at location 1
+
+gorge found at location 1 with value 18
+
+stored assu 00 at location 2
+
+stored eno eno at location 3
+
+ERROR enon not found
+
+stored fdfds 2131 at location 4
+
+stored Kenny 26 at location 5
+
+stored RJ 18565 at location 6
+
+stored Roth 4558 at location 7
+
+ERROR StaleMAte not found
+
+stored Booger 8956 at location 8
+
+stored okay 5446 at location 9
+
+stored whatthhellisaeno 101010 at location 10
+
+stored oramoss 1515 at location 11
+
+stored alfredo 45222 at location 12
+
+ERROR 55555 not found
+
+stored dummy 789453 at location 13
+
+stored lawl 4 at location 14
+
+ERROR lawl already exists at location 14
+
+stored youknow 56 at location 15
+
+stored doyouknow 56 at location 16
+
+stored nowyouknow 555 at location 17
+
+stored okayimdone 5633 at location 18
+

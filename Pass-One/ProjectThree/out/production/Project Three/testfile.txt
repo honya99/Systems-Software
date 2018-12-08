@@ -1,0 +1,23 @@
+ADDRES	START		100                               
+. tests pc forward addressing
+. tests base addressing
+. tests pc backward addressing
+NOW		+LDB		#BEGIN
+XXX		BASE    	BEGIN 
+YYY   	LDA    	BE
+			lda		=X'05'
+			ldx		=C'EOF' 
+			LTORG   
+LABEL		RSUB
+			RSUB
+EN       RESW   	4    
+BEGIN		BYTE     C'CHARACTER STRING'
+LITERAL  BYTE 		X'F1'
+LITERAL  BYTE		C'EOF'
+BE       WORD    	2                              
+BEGIN    RESW    	1
+JUNK     RESW    	2200                              
+THERE    RESW    	1                              
+ZZZ      LDA      JUNK                               
+MMM      STA      THERE                              
+         END      NOW                              

@@ -1,0 +1,15 @@
+The purpose of this program is to reverse an array of integers.
+This program is loaded into a SIC/XE environment.
+There are 10 hard-coded integers stored into an array.
+The integers in the array are stored in the loop in the accumulator.
+
+There are no files for I/O.
+sic.log shows the memory dump after each iteration of the loop. Look at the last dump at the bottom of the file.
+The contents are annotated by "[info]" for reading the integers forardand "{info}" for reading the integers backward
+sicdump.docx shows the original list of integers and the reveresed integers from the sic.log dump
+
+To run this program:
+Assemble the program by using the sicasm command. You will get two files: pgm.obj and pgm.lst
+Run the command sicsim. It will ask if you want to rename the files, type 'R'. Click enter once you see 'loader' then once you see DEVF1 type in 'pgm.obj'. Then continue clicking enter until the prompt appears again. Type 'A' if the file names are correct.
+Enter 'S' to start the pgm.obj file and then enter 'R' to run the pgm.obj file. Continue entering 'R' until it shows a message that indicates it is attempting to read past the file.
+Enter 'D 100-200' to dump the data that is stored in memory which will show the integers and the integers reversed.

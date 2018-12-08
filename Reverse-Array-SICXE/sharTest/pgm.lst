@@ -1,0 +1,35 @@
+*********************************************
+University of North Florida: SIC/XE assembler
+version date 11/12/2002
+account: n00952091; Tue Oct  2 23:49:19 2018
+*********************************************
+ASSEMBLER REPORT
+----------------
+     Loc   Object Code       Source Code
+     ---   -----------       -----------
+001- 00100                   	START	100
+002- 00100 090FFF            	LDL	#-1
+003- 00103 6D0003            	LDS	#3	.INITIALIZE REGISTER S TO 3
+004- 00106 75001F            	LDT	#31	.INITIALIZE REGISTER T TO 31
+005- 00109 050000            	LDX	#0
+006- 0010C 03A011            LOOP	LDA	ALPHA,X	.LOAD WORD FROM ALPHA INTO REGISTER X
+007- 0010F 9821              	MULR	L,X	.MULTIPLY REGISTER L AND X
+008- 00111 0FA045            	STA	BETA,X	.STORE WORD IN BETA
+009- 00114 9821              	MULR	L,X
+010- 00116 9041              	ADDR	S,X
+011- 00118 A015              	COMPR	X,T	.COMPARE NEW X INDEX VALUE TO 31
+012- 0011A 3B2FEF            	JLT	LOOP	.LOOP IF INDEX GREATER THAN 31
+013- 0011D 4F0000            	RSUB
+014- 00120 00005D            ALPHA	WORD	93
+015- 00123 000032            	WORD	50
+016- 00126 0000C5            	WORD	197
+017- 00129 000037            	WORD	55
+018- 0012C 000060            	WORD	96
+019- 0012F 000041            	WORD	65
+020- 00132 00004A            	WORD	74
+021- 00135 00005C            	WORD	92
+022- 00138 00002B            	WORD	43
+023- 0013B 000008            	WORD	8
+024- 0013E                   	RESW	9
+025- 00159                   BETA	RESW	1
+026- 0015C                   	END
